@@ -1,0 +1,239 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+
+.cjm-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0 2rem;
+}
+
+.cjm-table {
+  min-width: 1400px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.persona-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.persona-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.av-reini { background: #B5D4F4; color: #0C447C; }
+.av-hansjorg { background: #9FE1CB; color: #085041; }
+.av-bernhard { background: #F5C4B3; color: #712B13; }
+
+.row-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 0.75rem;
+  white-space: nowrap;
+  vertical-align: top;
+  padding-top: 0.5rem;
+  width: 90px;
+  min-width: 90px;
+}
+
+.step-header {
+  padding: 0.4rem 0.5rem;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  vertical-align: bottom;
+  position: sticky;
+  top: 0;
+  background: var(--color-background-primary);
+  z-index: 10;
+}
+
+.step-num {
+  display: block;
+  font-size: 9px;
+  color: var(--color-text-tertiary);
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.cell {
+  padding: 0.35rem 0.5rem;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--color-text-primary);
+  vertical-align: top;
+  border-right: 0.5px solid var(--color-border-tertiary);
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  min-width: 110px;
+}
+
+.cell:last-child { border-right: none; }
+
+.row-section { border-top: 2px solid var(--color-border-secondary); }
+
+.row-beschreibung .cell { background: var(--color-background-secondary); }
+
+.row-touchpoints .cell { background: var(--color-background-primary); }
+
+.row-pleasure .cell { background: #EAF3DE; }
+.row-pleasure .cell { color: #27500A; }
+
+.row-pain .cell { background: #FCEBEB; }
+.row-pain .cell { color: #791F1F; }
+
+.row-emotion .cell { background: #EEEDFE; }
+.row-emotion .cell { color: #3C3489; }
+
+.label-col {
+  border-right: 2px solid var(--color-border-secondary);
+  background: var(--color-background-primary) !important;
+  color: var(--color-text-secondary) !important;
+}
+
+.emotion-icon {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.section-start td { border-top: 2px solid var(--color-border-secondary); }
+
+.header-row th { border-bottom: 2px solid var(--color-border-secondary); }
+
+.label-header {
+  width: 90px;
+  min-width: 90px;
+  border-right: 2px solid var(--color-border-secondary);
+}
+</style>
+
+<h2 class="sr-only">Customer Journey Map für versierte ÖV-Nutzer: Reini, Hans Jörg und Bernhard</h2>
+
+<div class="cjm-wrapper">
+<table class="cjm-table">
+<thead>
+<tr class="header-row">
+  <th class="label-header"></th>
+  <th class="step-header"><span class="step-num">1</span>Inspiration</th>
+  <th class="step-header"><span class="step-num">2</span>Entscheid</th>
+  <th class="step-header"><span class="step-num">3</span>Koordination</th>
+  <th class="step-header"><span class="step-num">4</span>Ausflug planen</th>
+  <th class="step-header"><span class="step-num">5</span>Verbindung wählen</th>
+  <th class="step-header"><span class="step-num">6</span>Ticketkauf</th>
+  <th class="step-header"><span class="step-num">7</span>Weg zum Bahnhof</th>
+  <th class="step-header"><span class="step-num">8</span>Fahrt</th>
+  <th class="step-header"><span class="step-num">9</span>Anschluss</th>
+  <th class="step-header"><span class="step-num">10</span>Erlebnis</th>
+  <th class="step-header"><span class="step-num">11</span>Rückreise</th>
+  <th class="step-header"><span class="step-num">12</span>Evaluation</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- BESCHREIBUNG -->
+<tr class="row-beschreibung section-start">
+  <td class="row-label label-col">Beschreibung</td>
+  <td class="cell">Idee entsteht spontan aus Eigeninitiative, Tages­anzeiger, Veranstaltungs­hinweisen oder Vereins­aktivitäten</td>
+  <td class="cell">Schneller, meist spon­taner Entscheid — kein grosses Abwägen. ÖV ist selbstverständliche Wahl</td>
+  <td class="cell">Kurze Absprache wenn nötig; oft alleine oder mit bekannten ÖV-affinen Personen unterwegs</td>
+  <td class="cell">Minimalplanung: Ziel­ort, Wanderweg, Wetter­prognose und Webcam prüfen</td>
+  <td class="cell">Aktive Suche nach optimaler Verbindung via SBB-App / ZVV-App, inkl. Umsteigezeiten-Optimierung</td>
+  <td class="cell">Digital via SBB-App, Halbtax oder GA. Automat als Backup. Kauf läuft routiniert</td>
+  <td class="cell">Zu Fuss oder Velo zum Bahnhof. Kurze, vertraute Wege. Kein Stress</td>
+  <td class="cell">Entspannte Fahrt: Landschaft geniessen, lesen, gelegentlich mit Mitreisenden plaudern</td>
+  <td class="cell">Kenntnisreiches Umsteigen; kurze Anschlüsse werden bewusst einkalkuliert</td>
+  <td class="cell">Wandern, Vereins­aktivität, Kultur oder Stadtbummel — ÖV ist Mittel zum Zweck</td>
+  <td class="cell">Rückfahrt wird ähnlich geplant. Gedränge Sonntagabend wird akzeptiert aber nicht geliebt</td>
+  <td class="cell">Mentale Notiz über Verbindungsqualität; wenig formale Nachbearbeitung</td>
+</tr>
+
+<!-- TOUCHPOINTS -->
+<tr class="row-touchpoints">
+  <td class="row-label label-col">Touchpoints</td>
+  <td class="cell">Tages-Anzeiger, SBB-Newsletter, Vereinsmitteilungen, Wanderwege-App, Mundpropaganda</td>
+  <td class="cell">Persönlicher Kalender, Wetterapps, Intuition</td>
+  <td class="cell">Telefon/WhatsApp mit Begleitung, eigene Ent­scheidung bei Allein­reisen</td>
+  <td class="cell">Wanderwege-App, SBB-App, Wetter-App, Webcam, Internet-Suche</td>
+  <td class="cell">SBB-App, ZVV-App, Fahrzielanzeige, Zonenplan (Internet)</td>
+  <td class="cell">SBB-App (mobil), Halbtax/GA, Ticketautomat (Karte)</td>
+  <td class="cell">Gehweg / Velo, Bahnhofsareal, Anzeigetafeln</td>
+  <td class="cell">Zug, Sitzplatz, Fenster­ausblick, Mitreisende, SBB-App für Live-Status</td>
+  <td class="cell">Bahnhofs­anzeige, SBB-App, Strecken­kenntnisse, Bahnhofs­personal</td>
+  <td class="cell">Natur, Museums, Vereins­areal, Restau­rants, Bahnangebote vor Ort</td>
+  <td class="cell">SBB-App, Zug, evtl. Verspätungs­anzeige</td>
+  <td class="cell">Persönliche Erinnerung, evtl. Gespräch mit Begleitung</td>
+</tr>
+
+<!-- PLEASURE POINTS -->
+<tr class="row-pleasure">
+  <td class="row-label label-col" style="background:var(--color-background-primary);color:var(--color-text-secondary);">Pleasure points</td>
+  <td class="cell">Breites ÖV-Angebot eröffnet viele Ziele; Vereins­aktivität als starker Reize-Anker</td>
+  <td class="cell">Spontanität möglich — kein Voraus­buchen nötig; Halbtax/GA senkt Hemm­schwelle</td>
+  <td class="cell">Reisen mit Gleichgesinnten macht Spass; alleine fahren auch problemlos möglich</td>
+  <td class="cell">Schnelle, zuverlässige Infos via Apps; Planungsaufwand gering dank Netz­kenntnissen</td>
+  <td class="cell">Freude am Verbindungs­optimieren («Gehirnjogging»); schnellere Strecken durch Netz­kenntnis</td>
+  <td class="cell">Reibungsloser Kauf; Halbtax spart Geld; digitaler Fahrschein bequem</td>
+  <td class="cell">Kurzem Fussweg / Velo­fahrt; Bewegung angenehm; kein Park­platz­stress</td>
+  <td class="cell">Landschaft, Lesen, Entspannung, Kontakt mit Mitreisenden; keine Fahr­konzentration nötig</td>
+  <td class="cell">Kurze Anschlüsse kein Problem dank Erfahrung; Pünktlichkeit des Schweizer ÖV</td>
+  <td class="cell">Erlebnis selbst ist die Haupt­motivation; ÖV ermöglicht direkte Anreise ohne Parksuche</td>
+  <td class="cell">Routine­mässige Rück­reise; bei guter Pünktlichkeit entspannter Abschluss</td>
+  <td class="cell">Zufrieden­heit über gute Verbindungen bestätigt ÖV-Wahl; positives Gesamt­erlebnis</td>
+</tr>
+
+<!-- PAIN POINTS -->
+<tr class="row-pain">
+  <td class="row-label label-col" style="background:var(--color-background-primary);color:var(--color-text-secondary);">Pain points</td>
+  <td class="cell">Freizeit­impulse kommen selten direkt vom ZVV; wenig ziel­gruppen­gerechte Freizeitinspiration</td>
+  <td class="cell">Auto nötig wenn ÖV nicht hinführt (z.B. Pfannenstiel, abgelegene Ziele)</td>
+  <td class="cell">Umfeld (Freunde) fährt oft Auto → soziale Reibung; Koordination mit Auto­fahrern aufwändig</td>
+  <td class="cell">GA gilt nicht überall (Berg­bahnen, lokale Netze); Zusatz­billett-Pflicht nicht immer ersichtlich</td>
+  <td class="cell">Zonen­system und Anschluss­billett-Regeln schwer verständlich; Upgrade-Regeln verwirrend</td>
+  <td class="cell">Anschluss­billett-Logik komplex; Upgrade muss vor Einsteigen gelöst sein — viele wissen das nicht</td>
+  <td class="cell">Bei Velo: kein ÖV am Ziel (z.B. Pfannenstiel­gipfel), daher doch Auto nötig</td>
+  <td class="cell">Volle Züge (auch ausserhalb HVZ); Stehen müssen; Werbung auf Trams wirkt aggressiv (Bernhard)</td>
+  <td class="cell">Auslands­anschlüsse unsicher (Italien: Bus kommt nicht); Schiff/Seilbahn-Saisonstart unklar</td>
+  <td class="cell">Teils fehlende ÖV-Anbindung am Zielort zwingt zu Auto oder langen Fuss­wegen</td>
+  <td class="cell">Gedränge Sonntag­abend nervt; volle Züge sind Ärgernis</td>
+  <td class="cell">Keine etablierte Feedback-Möglichkeit; Verbesserungs­potenzial «geht verloren»</td>
+</tr>
+
+<!-- EMOTION -->
+<tr class="row-emotion">
+  <td class="row-label label-col" style="background:var(--color-background-primary);color:var(--color-text-secondary);">Emotion</td>
+  <td class="cell"><i class="ti ti-mood-smile" aria-hidden="true"></i> Neugier, Vorfreude — ÖV als selbst­verständlicher Ermöglicher</td>
+  <td class="cell"><i class="ti ti-mood-happy" aria-hidden="true"></i> Gelassen, souverän — kein Stress, Entscheidung fällt leicht</td>
+  <td class="cell"><i class="ti ti-mood-smile" aria-hidden="true"></i> Entspannt wenn alleine; leicht frustriert über Auto-Umfeld</td>
+  <td class="cell"><i class="ti ti-mood-smile" aria-hidden="true"></i> Fokussiert, neugierig — Planung macht Spass</td>
+  <td class="cell"><i class="ti ti-mood-happy" aria-hidden="true"></i> Freude am Optimieren; leichte Irrita­tion bei unklaren Regeln</td>
+  <td class="cell"><i class="ti ti-mood-smile" aria-hidden="true"></i> Routiniert, entspannt — nur bei Anschluss­billett-Fragen kurz unsicher</td>
+  <td class="cell"><i class="ti ti-mood-happy" aria-hidden="true"></i> Positiv, aktiv — Bewegung als Genuss (v.a. Reini mit Velo)</td>
+  <td class="cell"><i class="ti ti-mood-happy" aria-hidden="true"></i> Zufrieden, erholt; leicht genervt bei Über­füllung</td>
+  <td class="cell"><i class="ti ti-mood-smile" aria-hidden="true"></i> Kompetent, sicher; Stress nur bei unerwarteten Ausfällen</td>
+  <td class="cell"><i class="ti ti-mood-happy" aria-hidden="true"></i> Begeistert, erfüllt — Höhepunkt der Journey</td>
+  <td class="cell"><i class="ti ti-mood-smile" aria-hidden="true"></i> Entspannt bis leicht genervt (Gedränge); müde aber zufrieden</td>
+  <td class="cell"><i class="ti ti-mood-smile" aria-hidden="true"></i> Dankbar, positiv bestätigt — ÖV-Affinität wird bekräftigt</td>
+</tr>
+
+</tbody>
+</table>
+</div>
