@@ -13,8 +13,12 @@
 \usepackage{float}
 \usepackage{fancyhdr}
 \usepackage{csquotes}
+\usepackage{adjustbox}
+\usepackage[acronym]{glossaries}
 \usepackage[backend=biber,style=authoryear,sorting=nyt]{biblatex}
 \addbibresource{references.bib}
+\input{sections/glossary}
+\makeglossaries
 
 % Leichte Pastellfarben pro Double-Diamond-Phase
 \definecolor{identifyPastel}{HTML}{FFF4CC}
@@ -23,6 +27,8 @@
 \definecolor{developPastel}{HTML}{FFE8D6}
 \definecolor{deliverPastel}{HTML}{EAF0F7}
 \definecolor{defaultPastel}{HTML}{F1E7FF}
+
+\input{sections/figures/mindmap_style}
 
 % Spaltenabstand vergrößern
 \setlength{\columnsep}{1.5cm}
@@ -107,6 +113,13 @@
 \begin{multicols}{2}
 \input{sections/deliver}
 \end{multicols}
+
+\newpage
+\pagecolor{defaultPastel}
+\markboth{Glossar und Abkürzungsverzeichnis}{Glossar und Abkürzungsverzeichnis}
+\section*{Glossar und Abkürzungsverzeichnis}
+\addcontentsline{toc}{section}{Glossar und Abkürzungsverzeichnis}
+\printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 
 \newpage
 \pagecolor{defaultPastel}

@@ -1,0 +1,74 @@
+% Reusable style for all mindmap-like graphics in this report.
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+\definecolor{mmInk}{HTML}{000000}
+
+\tikzset{
+  mm canvas/.style={draw=none, fill=none},
+  mm node outline/.style={
+    draw=mmInk,
+    line cap=round,
+    line join=round,
+    line width=0.55pt
+  },
+  mm curve/.style={
+    draw=mmInk,
+    line cap=round,
+    line join=round,
+    line width=0.45pt
+  },
+  mm central/.style={
+    mm node outline,
+    circle,
+    minimum size=38mm,
+    align=center,
+    fill=identifyPastel,
+    text=mmInk,
+    font=\normalsize\itshape
+  },
+  mm topic/.style={
+    mm node outline,
+    rounded corners=2pt,
+    minimum width=30mm,
+    minimum height=8.5mm,
+    align=center,
+    fill=identifyPastel,
+    text=mmInk,
+    font=\normalsize\itshape,
+    inner xsep=2.5mm
+  },
+  mm sub/.style={
+    mm node outline,
+    rounded corners=2pt,
+    minimum width=26mm,
+    minimum height=8mm,
+    align=center,
+    fill=identifyPastel,
+    text=mmInk,
+    font=\normalsize\itshape,
+    inner xsep=2mm
+  },
+  mm topic red/.style={mm topic},
+  mm topic orange/.style={mm topic},
+  mm topic greyblue/.style={mm topic},
+  mm topic purple/.style={mm topic},
+  mm topic magenta/.style={mm topic},
+  mm topic brown/.style={mm topic},
+  mm topic dark/.style={mm topic},
+  mm sub red/.style={mm sub},
+  mm sub orange/.style={mm sub},
+  mm sub greyblue/.style={mm sub},
+  mm sub purple/.style={mm sub},
+  mm sub magenta/.style={mm sub},
+  mm sub brown/.style={mm sub},
+  mm sub dark/.style={mm sub},
+  mm link red/.style={mm curve},
+  mm link orange/.style={mm curve},
+  mm link greyblue/.style={mm curve},
+  mm link purple/.style={mm curve},
+  mm link magenta/.style={mm curve},
+  mm link brown/.style={mm curve},
+  mm link dark/.style={mm curve},
+  mm sublink/.style={mm curve}
+}

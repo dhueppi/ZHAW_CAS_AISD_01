@@ -1,0 +1,91 @@
+\begin{tikzpicture}[x=0.90cm,y=0.66cm]
+  % Center
+  \node[mm central] (center) at (0,0) {Deconstruction\\\gls{zvv} Case};
+
+  % Main branches
+  \node[mm topic red] (kanton) at (-3.0,4.2) {Kanton Zürich};
+  \node[mm topic orange] (freizeit) at (7.9,2.7) {Freizeitmobilität\\motivieren};
+  \node[mm topic dark] (massnahmen) at (8.4,-3.7) {Massnahmen};
+  \node[mm topic brown] (senioren) at (-0.6,-4.6) {Senioren};
+  \node[mm topic magenta] (vital) at (-6.3,-3.5) {Vital};
+  \node[mm topic purple] (nutzung) at (-7.2,-0.8) {Verstärkte Nutzung};
+  \node[mm topic greyblue] (auto) at (-6.4,2.2) {Autoabhängig};
+
+  \draw[mm link red] (center) to[bend left=10] (kanton);
+  \draw[mm link orange] (center) to[bend left=8] (freizeit);
+  \draw[mm link dark] (center) to[bend right=8] (massnahmen);
+  \draw[mm link brown] (center) to[bend right=6] (senioren);
+  \draw[mm link magenta] (center) to[bend right=10] (vital);
+  \draw[mm link purple] (center) to[bend right=7] (nutzung);
+  \draw[mm link greyblue] (center) to[bend left=7] (auto);
+
+  % Kanton Zürich subnodes
+  \node[mm sub red] (urban) at (-7.4,5.6) {Urban und ländlich};
+  \node[mm sub red] (gesamt) at (-1.0,5.9) {Gesamter Kanton};
+  \draw[mm sublink] (kanton) to[bend right=10] (urban);
+  \draw[mm sublink] (kanton) to[bend left=8] (gesamt);
+
+  % Freizeitmobilität motivieren subnodes
+  \node[mm sub orange] (arzt) at (2.1,3.9) {Arztbesuche};
+  \node[mm sub orange] (sport) at (5.4,4.4) {Sport};
+  \node[mm sub orange] (kultur) at (7.8,5.2) {Kultur};
+  \node[mm sub orange] (kulinarik) at (11.1,4.3) {Kulinarik};
+  \node[mm sub orange] (nichtEink) at (12.2,2.9) {Nicht Einkaufen};
+  \node[mm sub orange] (ebike) at (11.7,1.3) {E-Bike};
+  \node[mm sub orange] (familie) at (10.9,0.0) {Familienbesuche};
+  \node[mm sub orange] (nichtJob) at (6.1,0.2) {Nicht für Job};
+  \draw[mm sublink] (freizeit) to[bend right=6] (arzt);
+  \draw[mm sublink] (freizeit) to[bend left=5] (sport);
+  \draw[mm sublink] (freizeit) to[bend left=8] (kultur);
+  \draw[mm sublink] (freizeit) to[bend left=5] (kulinarik);
+  \draw[mm sublink] (freizeit) to[bend left=3] (nichtEink);
+  \draw[mm sublink] (freizeit) to[bend right=4] (ebike);
+  \draw[mm sublink] (freizeit) to[bend right=7] (familie);
+  \draw[mm sublink] (freizeit) to[bend right=10] (nichtJob);
+
+  % Massnahmen subnodes
+  \node[mm sub dark] (weiteres) at (5.4,-2.8) {Weitere Optionen};
+  \node[mm sub dark] (allesZiel) at (3.4,-5.4) {Alles, was dem Ziel dient};
+  \node[mm sub dark] (serviceApp) at (6.0,-6.4) {Services und App};
+  \node[mm sub dark] (kampagne) at (10.0,-6.6) {Kampagne und Public\\Opinion};
+  \node[mm sub dark] (infra) at (12.0,-5.0) {Infrastruktur};
+  \node[mm sub dark] (werbe) at (12.2,-3.5) {Werbematerial};
+  \node[mm sub dark] (phys) at (9.9,-2.4) {Physisches Produkt};
+  \draw[mm sublink] (massnahmen) to[bend left=8] (weiteres);
+  \draw[mm sublink] (massnahmen) to[bend right=8] (allesZiel);
+  \draw[mm sublink] (massnahmen) to[bend right=4] (serviceApp);
+  \draw[mm sublink] (massnahmen) to[bend right=5] (kampagne);
+  \draw[mm sublink] (massnahmen) to[bend right=2] (infra);
+  \draw[mm sublink] (massnahmen) to[bend left=2] (werbe);
+  \draw[mm sublink] (massnahmen) to[bend left=7] (phys);
+
+  % Senioren subnodes
+  \node[mm sub brown] (alter) at (2.4,-6.4) {Alter 65+};
+  \node[mm sub brown] (beruf) at (-3.2,-7.2) {Nicht mehr hauptberuflich\\angestellt};
+  \draw[mm sublink] (senioren) to[bend right=8] (alter);
+  \draw[mm sublink] (senioren) to[bend left=9] (beruf);
+
+  % Vital subnodes
+  \node[mm sub magenta] (fit) at (-9.8,-3.7) {Körperlich und geistig fit};
+  \node[mm sub magenta] (selbst) at (-9.8,-5.1) {Hohes Mass an\\Selbständigkeit};
+  \node[mm sub magenta] (quelle) at (-5.4,-5.7) {Quelle noch offen};
+  \draw[mm sublink] (vital) to[bend left=8] (fit);
+  \draw[mm sublink] (vital) to[bend left=2] (selbst);
+  \draw[mm sublink] (vital) to[bend right=8] (quelle);
+
+  % Verstärkte Nutzung subnodes
+  \node[mm sub purple] (moFr) at (-11.2,0.6) {Mo bis Fr\\09:00 bis 16:00};
+  \node[mm sub purple] (pendel) at (-11.3,-1.4) {Fokus auf pendlerfreie\\Zeiten};
+  \node[mm sub purple] (gering) at (-6.2,-2.4) {\gls{oev} gering ausgelastet};
+  \draw[mm sublink] (nutzung) to[bend left=7] (moFr);
+  \draw[mm sublink] (nutzung) to[bend left=2] (pendel);
+  \draw[mm sublink] (nutzung) to[bend right=7] (gering);
+
+  % Autoabhängig subnodes
+  \node[mm sub greyblue] (besitz) at (-8.0,3.8) {Im Besitz eines Autos};
+  \node[mm sub greyblue] (km) at (-10.8,2.3) {27 km pro Tag\\Auto oder \gls{oev}};
+  \node[mm sub greyblue] (ersteWahl) at (-7.2,1.0) {Auto als erste Wahl};
+  \draw[mm sublink] (auto) to[bend left=8] (besitz);
+  \draw[mm sublink] (auto) to[bend left=2] (km);
+  \draw[mm sublink] (auto) to[bend right=8] (ersteWahl);
+\end{tikzpicture}
