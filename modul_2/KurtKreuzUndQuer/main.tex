@@ -1,0 +1,121 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,landscape,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,sorting=nyt]{biblatex}
+\addbibresource{references.bib}
+
+% Leichte Pastellfarben pro Double-Diamond-Phase
+\definecolor{identifyPastel}{HTML}{FFF4CC}
+\definecolor{discoverPastel}{HTML}{DCEEFF}
+\definecolor{definePastel}{HTML}{E5F4E3}
+\definecolor{developPastel}{HTML}{FFE8D6}
+\definecolor{deliverPastel}{HTML}{EAF0F7}
+\definecolor{defaultPastel}{HTML}{F1E7FF}
+
+% Spaltenabstand vergrößern
+\setlength{\columnsep}{1.5cm}
+\setlength{\headheight}{14pt}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black,
+  pdftitle={Kurt Kreuz und Quer},
+  pdfauthor={Dominic}
+}
+
+\title{Kurt Kreuz und Quer}
+\author{Dominic}
+\date{\today}
+
+\newcommand{\worktitle}{Kurt Kreuz und Quer}
+
+% Inhaltsverzeichnis nur bis Ebene X.Y
+\setcounter{tocdepth}{2}
+
+\makeatletter
+\newcommand{\printtwocolumntoc}{%
+  \markboth{\contentsname}{\contentsname}
+  \section*{\contentsname}
+  \begin{multicols}{2}
+    \@starttoc{toc}
+  \end{multicols}
+}
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\worktitle}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+\pagecolor{defaultPastel}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\printtwocolumntoc
+\newpage
+
+\pagecolor{identifyPastel}
+\section{Identify Phase}
+\begin{multicols}{2}
+\input{sections/identify}
+\end{multicols}
+\newpage
+
+\pagecolor{discoverPastel}
+\section{Discover Phase}
+\begin{multicols}{2}
+\input{sections/discover}
+\end{multicols}
+\newpage
+
+\pagecolor{definePastel}
+\section{Define Phase}
+\begin{multicols}{2}
+\input{sections/define}
+\end{multicols}
+\newpage
+
+\pagecolor{developPastel}
+\section{Develop Phase}
+\begin{multicols}{2}
+\input{sections/develop}
+\end{multicols}
+\newpage
+
+\pagecolor{deliverPastel}
+\section{Deliver Phase}
+\begin{multicols}{2}
+\input{sections/deliver}
+\end{multicols}
+
+\newpage
+\pagecolor{defaultPastel}
+\markboth{Literaturverzeichnis}{Literaturverzeichnis}
+\section*{Literaturverzeichnis}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\nocite{*}
+\printbibliography[heading=none]
+
+\pagecolor{defaultPastel}
+
+\end{document}

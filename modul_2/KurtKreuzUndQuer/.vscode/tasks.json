@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build LaTeX",
+      "type": "shell",
+      "command": "if command -v latexmk >/dev/null 2>&1; then latexmk -pdf main.tex; else pdflatex -interaction=nonstopmode main.tex; fi",
+      "options": {
+        "cwd": "${workspaceFolder}/modul_2/KurtKreuzUndQuer"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean LaTeX",
+      "type": "shell",
+      "command": "if command -v latexmk >/dev/null 2>&1; then latexmk -c main.tex; else rm -f *.aux *.log *.out *.toc *.fls *.fdb_latexmk *.synctex.gz; fi",
+      "options": {
+        "cwd": "${workspaceFolder}/modul_2/KurtKreuzUndQuer"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
