@@ -1,68 +1,76 @@
 \begin{tikzpicture}[x=0.65cm,y=0.65cm, font=\scriptsize]
-  % Column positions with good spacing for landscape
-  \newcommand{\leftX}{-6.2}
+  % Column positions with spacing for landscape
+  \newcommand{\leftX}{-13}
   \newcommand{\midX}{0}
-  \newcommand{\rightX}{6.2}
-  \newcommand{\blockSpacing}{4.5}
-  \newcommand{\rowSpacing}{3.8}
-
-  % ========== COLUMN HEADERS ==========
-  \node[mm topic, minimum width=38mm] at (\leftX, 1.5) {Was wir\\nicht wissen};
-  \node[mm topic, minimum width=38mm] at (\midX, 1.5) {Was wir\\annehmen};
-  \node[mm topic, minimum width=38mm] at (\rightX, 1.5) {Was wir\\wissen};
+  \newcommand{\rightX}{13}
+  \newcommand{\blockSpacing}{2.8}
+  \newcommand{\rowSpacing}{3.4}
 
   % ========== LEFT COLUMN: Was wir nicht wissen ==========
   % Row 1
-  \node[mm sub, minimum width=24mm] at (\leftX - \blockSpacing, 0) {Gute und\\schlechte ÖV};
-  \node[mm sub, minimum width=24mm] at (\leftX, 0) {Nutzung\\Mobility};
-  \node[mm sub, minimum width=24mm] at (\leftX + \blockSpacing, 0) {Beschäftigung\\Verhalten};
-  
+  \node[mm sub, minimum width=24mm] (L1) at (\leftX - \blockSpacing, 0) {Gute und\\schlechte ÖV};
+  \node[mm sub, minimum width=24mm] (L2) at (\leftX, 0) {Nutzung\\Mobility};
+  \node[mm sub, minimum width=24mm] (L3) at (\leftX + \blockSpacing, 0) {Beschäftigung\\Verhalten};
   % Row 2
-  \node[mm sub, minimum width=24mm] at (\leftX - \blockSpacing, -\rowSpacing) {Verhaltens-\\gründe};
-  \node[mm sub, minimum width=24mm] at (\leftX, -\rowSpacing) {Typischer\\Tag};
-  \node[mm sub, minimum width=24mm] at (\leftX + \blockSpacing, -\rowSpacing) {Schwerpunkte\\Prioritäten};
-  
+  \node[mm sub, minimum width=24mm] (L4) at (\leftX - \blockSpacing, -\rowSpacing) {Verhaltens-\\gründe};
+  \node[mm sub, minimum width=24mm] (L5) at (\leftX, -\rowSpacing) {Typischer\\Tag};
+  \node[mm sub, minimum width=24mm] (L6) at (\leftX + \blockSpacing, -\rowSpacing) {Schwerpunkte\\Prioritäten};
   % Row 3
-  \node[mm sub, minimum width=24mm] at (\leftX - \blockSpacing, -2*\rowSpacing) {Informations-\\quellen};
-  \node[mm sub, minimum width=24mm] at (\leftX, -2*\rowSpacing) {Highlight\\Momente};
-  \node[mm sub, minimum width=24mm] at (\leftX + \blockSpacing, -2*\rowSpacing) {Wann wird\\entschieden};
-  
+  \node[mm sub, minimum width=24mm] (L7) at (\leftX - \blockSpacing, -2*\rowSpacing) {Informations-\\quellen};
+  \node[mm sub, minimum width=24mm] (L8) at (\leftX, -2*\rowSpacing) {Highlight\\Momente};
+  \node[mm sub, minimum width=24mm] (L9) at (\leftX + \blockSpacing, -2*\rowSpacing) {Wann wird\\entschieden};
   % Row 4
-  \node[mm sub, minimum width=22mm] at (\leftX - \blockSpacing, -3*\rowSpacing) {Freizeit-\\verhalten};
-  \node[mm sub, minimum width=22mm] at (\leftX, -3*\rowSpacing) {Digitale\\Affinität};
+  \node[mm sub, minimum width=22mm] (L10) at (\leftX - \blockSpacing, -3*\rowSpacing) {Freizeit-\\verhalten};
+  \node[mm sub, minimum width=22mm] (L11) at (\leftX, -3*\rowSpacing) {Digitale\\Affinität};
 
   % ========== CENTER COLUMN: Was wir annehmen ==========
   % Row 1
-  \node[mm sub, minimum width=24mm] at (\midX - \blockSpacing, 0) {Fehlendes\\Wissen};
-  \node[mm sub, minimum width=24mm] at (\midX, 0) {Psychologische\\Gründe};
-  \node[mm sub, minimum width=24mm] at (\midX + \blockSpacing, 0) {Gewohnheit\\Flexibilität};
-
+  \node[mm sub, minimum width=24mm] (M1) at (\midX - \blockSpacing, 0) {Fehlendes\\Wissen};
+  \node[mm sub, minimum width=24mm] (M2) at (\midX, 0) {Psychologische\\Gründe};
+  \node[mm sub, minimum width=24mm] (M3) at (\midX + \blockSpacing, 0) {Gewohnheit\\Flexibilität};
   % Row 2
-  \node[mm sub, minimum width=22mm] at (\midX - \blockSpacing, -\rowSpacing) {Physische\\Barrieren};
-  \node[mm sub, minimum width=22mm] at (\midX, -\rowSpacing) {Erlebnis-\\orientiert};
-  \node[mm sub, minimum width=24mm] at (\midX + \blockSpacing, -\rowSpacing) {Nicht als\\Senior};
-  
+  \node[mm sub, minimum width=22mm] (M4) at (\midX - \blockSpacing, -\rowSpacing) {Physische\\Barrieren};
+  \node[mm sub, minimum width=22mm] (M5) at (\midX, -\rowSpacing) {Erlebnis-\\orientiert};
+  \node[mm sub, minimum width=24mm] (M6) at (\midX + \blockSpacing, -\rowSpacing) {Nicht als\\Senior};
   % Row 3
-  \node[mm sub, minimum width=20mm] at (\midX - \blockSpacing, -2*\rowSpacing) {Auto =\\Freiheit};
-  \node[mm sub, minimum width=20mm] at (\midX, -2*\rowSpacing) {Zugang\\zu ÖV};
-  \node[mm sub, minimum width=22mm] at (\midX + \blockSpacing, -2*\rowSpacing) {Ländlich:\\schlechter};
-
+  \node[mm sub, minimum width=20mm] (M7) at (\midX - \blockSpacing, -2*\rowSpacing) {Auto =\\Freiheit};
+  \node[mm sub, minimum width=20mm] (M8) at (\midX, -2*\rowSpacing) {Zugang\\zu ÖV};
+  \node[mm sub, minimum width=22mm] (M9) at (\midX + \blockSpacing, -2*\rowSpacing) {Ländlich:\\schlechter};
   % Row 4
-  \node[mm sub, minimum width=22mm] at (\midX - \blockSpacing, -3*\rowSpacing) {Status-\\symbol};
-  \node[mm sub, minimum width=24mm] at (\midX, -3*\rowSpacing) {1. Behavioral\\Assumptions};
-  \node[mm sub, minimum width=22mm] at (\midX + \blockSpacing, -3*\rowSpacing) {2. Social\\Influence};
-  
-  % Row 5 (bottom annotations)
-  \node[mm sub, minimum width=24mm] at (\midX, -4*\rowSpacing) {3. Context:\\Wetter/Ziel};
+  \node[mm sub, minimum width=22mm] (M10) at (\midX - \blockSpacing, -3*\rowSpacing) {Status-\\symbol};
+  \node[mm sub, minimum width=24mm] (M11) at (\midX, -3*\rowSpacing) {1. Behavioral\\Assumptions};
+  \node[mm sub, minimum width=22mm] (M12) at (\midX + \blockSpacing, -3*\rowSpacing) {2. Social\\Influence};
+  % Row 5
+  \node[mm sub, minimum width=24mm] (M13) at (\midX, -4*\rowSpacing) {3. Context:\\Wetter/Ziel};
 
   % ========== RIGHT COLUMN: Was wir wissen ==========
   % Row 1
-  \node[mm sub, minimum width=24mm] at (\rightX - \blockSpacing, 0) {Züge nicht\\ausgelastet};
-  \node[mm sub, minimum width=24mm] at (\rightX, 0) {Auto als\\Hauptmittel};
-  \node[mm sub, minimum width=24mm] at (\rightX + \blockSpacing, 0) {ÖV-Angebot\\unzureichend};
-
+  \node[mm sub, minimum width=24mm] (R1) at (\rightX - \blockSpacing, 0) {Züge nicht\\ausgelastet};
+  \node[mm sub, minimum width=24mm] (R2) at (\rightX, 0) {Auto als\\Hauptmittel};
+  \node[mm sub, minimum width=24mm] (R3) at (\rightX + \blockSpacing, 0) {ÖV-Angebot\\unzureichend};
   % Row 2
-  \node[mm sub, minimum width=22mm] at (\rightX - \blockSpacing, -\rowSpacing) {ZVV kennt\\Kunden};
-  \node[mm sub, minimum width=20mm] at (\rightX, -\rowSpacing) {Kaufkräftig};
-  \node[mm sub, minimum width=20mm] at (\rightX + \blockSpacing, -\rowSpacing) {Auto-\\kosten};
+  \node[mm sub, minimum width=22mm] (R4) at (\rightX - \blockSpacing, -\rowSpacing) {ZVV kennt\\Kunden};
+  \node[mm sub, minimum width=20mm] (R5) at (\rightX, -\rowSpacing) {Kaufkräftig};
+  \node[mm sub, minimum width=20mm] (R6) at (\rightX + \blockSpacing, -\rowSpacing) {Auto-\\kosten};
+
+  % ========== CONTAINERS (background layer) ==========
+  \begin{pgfonbackgroundlayer}
+    % Left container
+    \node[mm container, fit=(L1)(L3)(L10)(L11),
+      inner sep=5mm] (cLeft) {};
+    % Center container
+    \node[mm container, fit=(M1)(M3)(M13),
+      inner sep=5mm] (cMid) {};
+    % Right container
+    \node[mm container, fit=(R1)(R3)(R4)(R6),
+      inner sep=5mm] (cRight) {};
+  \end{pgfonbackgroundlayer}
+
+  % ========== CONTAINER HEADERS ==========
+  \node[mm container title, minimum width=38mm]
+    at (cLeft.north) {Was wir\\nicht wissen};
+  \node[mm container title, minimum width=38mm]
+    at (cMid.north) {Was wir\\annehmen};
+  \node[mm container title, minimum width=38mm]
+    at (cRight.north) {Was wir\\wissen};
 \end{tikzpicture}

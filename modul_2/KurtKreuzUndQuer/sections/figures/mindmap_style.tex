@@ -1,6 +1,6 @@
 % Reusable style for all mindmap-like graphics in this report.
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,calc}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
 
 \definecolor{mmInk}{HTML}{000000}
 
@@ -70,5 +70,24 @@
   mm link magenta/.style={mm curve},
   mm link brown/.style={mm curve},
   mm link dark/.style={mm curve},
-  mm sublink/.style={mm curve}
+  mm sublink/.style={mm curve},
+  mm container/.style={
+    rounded corners=4pt,
+    draw=mmInk,
+    line width=0.55pt,
+    fill=identifyPastel!15,
+    inner sep=4mm
+  },
+  mm container title/.style={
+    fill=identifyPastel,
+    draw=mmInk,
+    rounded corners=2pt,
+    line width=0.55pt,
+    minimum height=9mm,
+    align=center,
+    text=mmInk,
+    font=\normalsize\bfseries\itshape,
+    inner xsep=3mm,
+    anchor=north
+  }
 }
