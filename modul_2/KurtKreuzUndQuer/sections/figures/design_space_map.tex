@@ -1,9 +1,9 @@
 \begin{tikzpicture}[x=0.65cm,y=0.65cm, font=\scriptsize]
   % Column positions with spacing for landscape
   \newcommand{\leftX}{-13}
-  \newcommand{\midX}{0}
+  \newcommand{\midX}{1}
   \newcommand{\rightX}{13}
-  \newcommand{\blockSpacing}{2.8}
+  \newcommand{\blockSpacing}{4.0}
   \newcommand{\rowSpacing}{3.4}
 
   % ========== LEFT COLUMN: Was wir nicht wissen ==========
@@ -45,32 +45,35 @@
 
   % ========== RIGHT COLUMN: Was wir wissen ==========
   % Row 1
-  \node[mm sub, minimum width=24mm] (R1) at (\rightX - \blockSpacing, 0) {Züge nicht\\ausgelastet};
-  \node[mm sub, minimum width=24mm] (R2) at (\rightX, 0) {Auto als\\Hauptmittel};
-  \node[mm sub, minimum width=24mm] (R3) at (\rightX + \blockSpacing, 0) {ÖV-Angebot\\unzureichend};
+  \node[mm sub, minimum width=24mm] (R1) at (\rightX - \blockSpacing/2, 0) {Züge nicht\\ausgelastet};
+  \node[mm sub, minimum width=24mm] (R2) at (\rightX + \blockSpacing/2, 0) {Auto als\\Hauptmittel};
   % Row 2
-  \node[mm sub, minimum width=22mm] (R4) at (\rightX - \blockSpacing, -\rowSpacing) {ZVV kennt\\Kunden};
-  \node[mm sub, minimum width=20mm] (R5) at (\rightX, -\rowSpacing) {Kaufkräftig};
-  \node[mm sub, minimum width=20mm] (R6) at (\rightX + \blockSpacing, -\rowSpacing) {Auto-\\kosten};
+  \node[mm sub, minimum width=24mm] (R3) at (\rightX - \blockSpacing/2, -\rowSpacing) {ÖV-Angebot\\unzureichend};
+  \node[mm sub, minimum width=22mm] (R4) at (\rightX + \blockSpacing/2, -\rowSpacing) {ZVV kennt\\Kunden};
+  % Row 3
+  \node[mm sub, minimum width=20mm] (R5) at (\rightX - \blockSpacing/2, -2*\rowSpacing) {Kaufkräftig};
+  \node[mm sub, minimum width=20mm] (R6) at (\rightX + \blockSpacing/2, -2*\rowSpacing) {Auto-\\kosten};
+
+  % ========== PADDING NODES for title space ==========
+  \node[inner sep=0pt, minimum height=0pt] (padLeft) at (\leftX, 2.8) {};
+  \node[inner sep=0pt, minimum height=0pt] (padMid) at (\midX, 2.8) {};
+  \node[inner sep=0pt, minimum height=0pt] (padRight) at (\rightX, 2.8) {};
 
   % ========== CONTAINERS (background layer) ==========
-  \begin{pgfonbackgroundlayer}
+  \begin{pgfonlayer}{background}
     % Left container
-    \node[mm container, fit=(L1)(L3)(L10)(L11),
-      inner sep=5mm] (cLeft) {};
+    \node[mm container, fit=(padLeft)(L1)(L3)(L10)(L11),
+      inner sep=4mm, fill=red!10] (cLeft) {};
     % Center container
-    \node[mm container, fit=(M1)(M3)(M13),
-      inner sep=5mm] (cMid) {};
+    \node[mm container, fit=(padMid)(M1)(M3)(M13),
+      inner sep=4mm, fill=orange!15] (cMid) {};
     % Right container
-    \node[mm container, fit=(R1)(R3)(R4)(R6),
-      inner sep=5mm] (cRight) {};
-  \end{pgfonbackgroundlayer}
+    \node[mm container, fit=(padRight)(R1)(R2)(R5)(R6),
+      inner sep=4mm, fill=green!10] (cRight) {};
+  \end{pgfonlayer}
 
   % ========== CONTAINER HEADERS ==========
-  \node[mm container title, minimum width=38mm]
-    at (cLeft.north) {Was wir\\nicht wissen};
-  \node[mm container title, minimum width=38mm]
-    at (cMid.north) {Was wir\\annehmen};
-  \node[mm container title, minimum width=38mm]
-    at (cRight.north) {Was wir\\wissen};
+  \node[mm container title] at ([yshift=-5mm]cLeft.north) {Was wir\\nicht wissen};
+  \node[mm container title] at ([yshift=-5mm]cMid.north) {Was wir\\annehmen};
+  \node[mm container title] at ([yshift=-5mm]cRight.north) {Was wir\\wissen};
 \end{tikzpicture}

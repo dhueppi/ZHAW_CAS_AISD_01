@@ -1,0 +1,70 @@
+\begin{tikzpicture}[x=1cm, y=1cm, font=\scriptsize]
+
+  % ========== STYLE DEFINITIONS ==========
+  \tikzset{
+    postit inner/.style={
+      rectangle, rounded corners=1pt, draw=mmInk, line width=0.4pt,
+      fill=identifyPastel!80!blue!30, minimum width=18mm, minimum height=12mm,
+      align=center, text=mmInk, font=\scriptsize\itshape, inner sep=1.5mm
+    },
+    postit middle/.style={
+      rectangle, rounded corners=1pt, draw=mmInk, line width=0.4pt,
+      fill=identifyPastel!60!blue!15, minimum width=18mm, minimum height=12mm,
+      align=center, text=mmInk, font=\scriptsize\itshape, inner sep=1.5mm
+    },
+    postit outer/.style={
+      rectangle, rounded corners=1pt, draw=mmInk, line width=0.4pt,
+      fill=cyan!25, minimum width=18mm, minimum height=12mm,
+      align=center, text=mmInk, font=\scriptsize\itshape, inner sep=1.5mm
+    },
+  }
+
+  % ========== THREE CONCENTRIC CIRCLES ==========
+  \draw[draw=blue!30, line width=0.8pt] (0,0) circle (2.8cm);
+  \draw[draw=blue!30, line width=0.8pt] (0,0) circle (5.5cm);
+  \draw[draw=blue!30, line width=0.8pt] (0,0) circle (8.0cm);
+
+  % ========== CENTER: Person icon ==========
+  % Head
+  \fill[blue!40!black] (0,0.45) circle (0.35cm);
+  % Body
+  \fill[blue!40!black] (-0.5,-0.15) to[out=80,in=180] (0,0.15)
+    to[out=0,in=100] (0.5,-0.15)
+    to[out=-30,in=-150] (0.5,-0.7) -- (-0.5,-0.7)
+    to[out=-30,in=210] (-0.5,-0.15);
+
+  % ========== INNER CIRCLE: Primäre Nutzende ==========
+  \node[postit inner, minimum width=22mm] at (0,1.8) {Nutzer: vitale\\Senioren\\(Ausflügler:in)};
+  \node[postit inner, minimum width=22mm] at (0,-1.8) {soziales\\Umfeld};
+
+  % ========== MIDDLE CIRCLE: Schlüssel-Partner ==========
+  % Top area
+  \node[postit middle] at (-2.2, 4.2) {bereits öV\\fahrende\\Senioren};
+  \node[postit middle] at (2.2, 4.2) {Bund \&\\Kantone};
+
+  % Left area
+  \node[postit middle, minimum width=26mm, minimum height=22mm, font=\tiny\itshape] at (-3.8, 2.5)
+    {``Invisible Influencers''\\Ärzte (Führerschein-\\Thema), Gemeinden\\(Infrastruktur,\\Angebote),\\Versicherungen,\\Medien / gesellsch.\\Bild};
+
+  % Right area
+  \node[postit middle, minimum width=20mm, font=\normalsize\itshape] at (4.2, 2.8) {SBB};
+  \node[postit middle, minimum width=20mm, font=\normalsize\itshape] at (4.2, 0.2) {ZSG};
+
+  % Mid-left
+  \node[postit middle] at (-3.2, -0.5) {Tourismus-\\Vereinigungen};
+  \node[postit middle] at (-3.2, -2.8) {Bahnhöfe\\(Shops,\\Restaurants, ...)};
+
+  % Bottom area
+  \node[postit middle, minimum width=22mm] at (-1.5, -4.0) {Bewerter:\\CAS Profs.\\(Sandro \& Nina)};
+  \node[postit middle] at (1.5, -4.0) {weitere ZVV\\Dienstleister};
+  \node[postit middle] at (3.5, -3.5) {Weitere\\Verkehrs-\\verbünde};
+  \node[postit middle] at (4.0, -1.5) {Auftraggeber:\\ZVV (Pascal)};
+
+  % ========== OUTER CIRCLE / OUTSIDE: Erweitertes Umfeld ==========
+  \node[postit outer] at (0, 7.5) {Pendler\\$< 65$};
+  \node[postit outer] at (5.5, 6.5) {Gesellschaft\\Schweiz};
+  \node[postit outer] at (-7.0, 0) {Autolobby};
+  \node[postit outer] at (7.0, 0) {Umwelt-\\Bewusste};
+  \node[postit outer] at (0, -7.5) {Freizeitanbieter};
+
+\end{tikzpicture}
