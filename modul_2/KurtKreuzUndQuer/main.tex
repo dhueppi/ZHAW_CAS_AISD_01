@@ -40,11 +40,11 @@
   linkcolor=blue!50!black,
   urlcolor=blue!50!black,
   pdftitle={Kurt Kreuz und Quer},
-  pdfauthor={Dominic}
+  pdfauthor={Martina Fasano, Simona Venzin, Dominic Hüppi}
 }
 
 \title{Kurt Kreuz und Quer}
-\author{Dominic}
+\author{Martina Fasano, Simona Venzin, Dominic Hüppi}
 \date{\today}
 
 \newcommand{\worktitle}{Kurt Kreuz und Quer}
@@ -75,10 +75,21 @@
 \pagecolor{defaultPastel}
 
 \maketitle
+\begin{center}
+  \vspace{0.8cm}
+  \includegraphics[width=0.72\textwidth]{ressourcen/develop/develop1.png}
+\end{center}
 \thispagestyle{empty}
 \newpage
 
 \printtwocolumntoc
+\newpage
+
+\pagecolor{defaultPastel}
+\section{Einleitung}
+\begin{multicols}{2}
+\input{sections/einleitung}
+\end{multicols}
 \newpage
 
 \pagecolor{identifyPastel}
@@ -120,6 +131,7 @@
 \markboth{Glossar und Abkürzungsverzeichnis}{Glossar und Abkürzungsverzeichnis}
 \section*{Glossar und Abkürzungsverzeichnis}
 \addcontentsline{toc}{section}{Glossar und Abkürzungsverzeichnis}
+\printglossary[title=Glossar,nonumberlist]
 \printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 
 \newpage
