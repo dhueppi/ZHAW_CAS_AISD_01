@@ -11,6 +11,7 @@
 \usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{float}
+\usepackage{caption}
 \usepackage{fancyhdr}
 \usepackage{csquotes}
 \usepackage{adjustbox}
@@ -63,6 +64,27 @@
 }
 \makeatother
 
+% Full-width image block inside chapter files that are wrapped by multicols in main.tex.
+% Usage: \FullWidthFigure[<width>]{<path>}{<caption>}
+\newcommand{\FullWidthFigure}[3][\textwidth]{%
+  \end{multicols}
+  \newpage
+  \begin{center}
+    \begin{minipage}{\textwidth}
+      \centering
+      \IfFileExists{#2.tex}{%
+        \input{#2}%
+      }{%
+        \includegraphics[width=#1]{#2}%
+      }
+      \captionsetup{type=figure,justification=centering}
+      \captionof{figure}{#3}
+    \end{minipage}
+  \end{center}
+  \newpage
+  \begin{multicols}{2}%
+}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\worktitle}
@@ -83,6 +105,13 @@
 \newpage
 
 \printtwocolumntoc
+\newpage
+
+\pagecolor{defaultPastel}
+\markboth{Abbildungsverzeichnis}{Abbildungsverzeichnis}
+\section*{Abbildungsverzeichnis}
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
 \newpage
 
 \pagecolor{defaultPastel}

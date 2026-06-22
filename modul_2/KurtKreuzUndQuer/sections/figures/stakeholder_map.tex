@@ -1,4 +1,4 @@
-\begin{tikzpicture}[x=1cm, y=1cm, font=\scriptsize]
+\begin{tikzpicture}[x=0.76cm, y=0.76cm, font=\scriptsize]
 
   % Keep the graphic's bounding box symmetric around the origin for stable centering.
   \path[use as bounding box] (-8.5,-8.5) rectangle (8.5,8.5);
@@ -23,16 +23,16 @@
   }
 
   % ========== THREE CONCENTRIC CIRCLES (filled outside-in for ring effect) ==========
-  \fill[green!10] (0,0) circle (8cm);
-  \draw[draw=black, line width=0.8pt] (0,0) circle (8cm);
-  \fill[orange!15] (0,0) circle (6cm);
-  \draw[draw=black, line width=0.8pt] (0,0) circle (6cm);
-  \fill[red!10] (0,0) circle (3cm);
-  \draw[draw=black, line width=0.8pt] (0,0) circle (3cm);
+  \fill[green!10] (0,0) circle (8);
+  \draw[draw=black, line width=0.8pt] (0,0) circle (8);
+  \fill[orange!15] (0,0) circle (6);
+  \draw[draw=black, line width=0.8pt] (0,0) circle (6);
+  \fill[red!10] (0,0) circle (3);
+  \draw[draw=black, line width=0.8pt] (0,0) circle (3);
 
   % ========== CENTER: Person icon ==========
   % Head
-  \fill[blue!40!black] (0,0.45) circle (0.35cm);
+  \fill[blue!40!black] (0,0.45) circle (0.35);
   % Body
   \fill[blue!40!black] (-0.5,-0.15) to[out=80,in=180] (0,0.15)
     to[out=0,in=100] (0.5,-0.15)
