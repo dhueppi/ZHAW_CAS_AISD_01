@@ -16,6 +16,7 @@
 \usepackage{csquotes}
 \usepackage{adjustbox}
 \usepackage{pdflscape}
+\usepackage{parskip}
 \usepackage[acronym]{glossaries}
 \usepackage[backend=biber,style=authoryear,sorting=nyt]{biblatex}
 \addbibresource{references.bib}
@@ -161,6 +162,8 @@
 \section*{Glossar und Abkürzungsverzeichnis}
 \addcontentsline{toc}{section}{Glossar und Abkürzungsverzeichnis}
 \printglossary[title=Glossar,nonumberlist]
+
+\newpage
 \printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
 
 \newpage
