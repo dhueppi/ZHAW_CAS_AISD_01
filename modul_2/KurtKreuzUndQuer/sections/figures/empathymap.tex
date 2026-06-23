@@ -1,0 +1,86 @@
+% Empathy Map (Discover-Phase) als TikZ-Nachbau der gleichnamigen Grafik.
+% Stil (Schrift, Groesse, Farbe) analog der uebrigen TikZ-Figures: schwarze
+% Konturen, Fuellung in Seitenfarbe (discoverPastel), schwarzer Text.
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    lcard/.style={
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      text=mmInk, font=\scriptsize\itshape, align=left,
+      text width=56mm, inner sep=1.6mm, anchor=north west
+    },
+    mcard/.style={
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      text=mmInk, font=\scriptsize\itshape, align=left,
+      text width=88mm, inner sep=1.6mm, anchor=north west
+    },
+    rcard/.style={
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      text=mmInk, font=\scriptsize\itshape, align=left,
+      text width=54mm, inner sep=1.6mm, anchor=north west
+    },
+    quote/.style={font=\scriptsize\itshape},
+    emsub/.style={anchor=north west, font=\normalsize\bfseries\itshape, text=mmInk, inner sep=0pt}
+  ]
+
+  % ================= Kopfzeile =================
+  \node[anchor=north west, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+        text=mmInk, font=\normalsize\bfseries\itshape,
+        align=center, text width=224mm, inner sep=2mm, rounded corners=2pt]
+        (hdr) at (0,0)
+    {Empathy Map \quad|\quad Frisch Pensionierte (65--70 J.) \quad|\quad Zielgruppe: ZVV-Fallstudie ``Mobilität für vitale Senior:innen''};
+
+  % ================= HEAR (linke Spalte) =================
+  \node[emsub] (lh) at (0,-1.4) {HEAR?};
+  \node[lcard] (l1) at (0,-1.95)
+    {``Fahre doch mal mit dem Zug'' -- von Kindern und jüngeren Familienmitgliedern, die selbst kein Auto besitzen. {\quote(Christian)}};
+  \node[lcard] (l2) at (0,-4.30)
+    {Umfeld ist fast ausschliesslich auto-orientiert: ``Ich kenne niemanden im Freundeskreis, der ÖV fährt.'' {\quote(Christian)}};
+  \node[lcard] (l3) at (0,-6.65)
+    {Vereinskollegen, Pro-Senectute-Ausflüge und Veranstaltungskalender prägen das Freizeitverhalten. {\quote(B.\,Siegenthaler, Hans Jörg)}};
+  \node[lcard] (l4) at (0,-9.00)
+    {Medien: Tages-Anzeiger, Sonntags\-Zeitung, Online-Suche zu Aktivitäten, Pollenflug, Wanderwege. {\quote(Hans Jörg)}};
+
+  % ================= THINK \& FEEL (Mitte oben) =================
+  \node[emsub] (mh1) at (6.9,-1.4) {THINK \& FEEL?};
+  \node[mcard] (m1) at (6.9,-1.95)
+    {``Das Auto ist Freiheit -- jederzeit einsteigen, wegfahren, ohne Fahrplan.'' Mobilität = Autonomie \& Identität. {\quote(Christof, Christian, Edna)}};
+  \node[mcard] (m2) at (6.9,-3.55)
+    {Neugierde und Freude am Entdecken: Ausstellungen, Museen, Wanderungen, kulturelle Orte. {\quote(Hans Jörg, Peter, Margrit)}};
+  \node[mcard] (m3) at (6.9,-5.00)
+    {Unsicherheit beim ÖV-Einstieg: ``Was, wenn ich das falsche Ticket löse?'' -- Angst vor dem Fehler. {\quote(P.\,Büki, Margrit)}};
+  \node[mcard] (m4) at (6.9,-6.45)
+    {Nach Pensionierung: ``Was kommt jetzt?'' -- offen für neue Strukturen, Gewohnheiten und Rollen. {\quote(Peter, Christof, Hans Jörg)}};
+  \node[mcard] (m5) at (6.9,-7.90)
+    {Freude am Gemeinsam-Erleben: Ausflüge mit Freundin, Gruppe oder Familie -- soziales Miteinander als Wert. {\quote(Margrit, Peter)}};
+
+  % ================= SAY \& DO (Mitte unten) =================
+  \node[emsub] (mh2) at (6.9,-9.65) {SAY \& DO?};
+  \node[mcard] (s1) at (6.9,-10.20)
+    {``Ich nehme das Auto für Transporte und schwere Sachen -- sonst eigentlich immer den ÖV.'' {\quote(Peter)}};
+  \node[mcard] (s2) at (6.9,-11.40)
+    {Plant Ausflüge sorgfältig: Wetter, Wanderweg-App, ZVV/SBB-App, Webcam. Das Spontane gehört aber dem Auto. {\quote(Hans Jörg, Peter)}};
+  \node[mcard] (s3) at (6.9,-12.60)
+    {Fährt bewusst Erlebnisrouten: GoldenPass, Nostalgiezug, Dampfbahn Furka. ``Die Fahrt ist das Ziel.'' {\quote(Margrit, Hans Jörg)}};
+  \node[mcard] (s4) at (6.9,-13.80)
+    {``Wenn ich nach Zürich gehe, nehme ich die S-Bahn'' -- ÖV bei konkretem Nachteil des Autos (Parkplatz). {\quote(Christian, Christof)}};
+
+  % ================= SEE (rechte Spalte) =================
+  \node[emsub] (rh) at (17.3,-1.4) {SEE?};
+  \node[rcard] (r1) at (17.3,-1.95)
+    {Kataloge von Carunternehmen im Briefkasten $\rightarrow$ kuratierte, einfache Erlebnisreisen ohne eigene Planung. {\quote(Margrit)}};
+  \node[rcard] (r2) at (17.3,-4.55)
+    {Volle Züge und Gedränge in der Stosszeit $\rightarrow$ verstärkt das Bild ``ÖV ist unbequem und stressig''. {\quote(Peter, Edna)}};
+  \node[rcard] (r3) at (17.3,-7.15)
+    {Werbung für GoldenPass und Sonderfahrten $\rightarrow$ weckt Interesse, wenn das Erlebnisversprechen klar und visuell ist. {\quote(Margrit)}};
+  \node[rcard] (r4) at (17.3,-9.75)
+    {Zeitungsberichte über ÖV-Verspätungen und Ausfälle $\rightarrow$ bestätigen negative Annahmen über Zuverlässigkeit. {\quote(Margrit)}};
+
+  % ================= Hintergrund-Panels =================
+  \begin{pgfonlayer}{background}
+    \node[mm container, inner sep=2mm, fit=(lh)(l1)(l4)] {};
+    \node[mm container, inner sep=2mm, fit=(mh1)(m1)(m5)] {};
+    \node[mm container, inner sep=2mm, fit=(mh2)(s1)(s4)] {};
+    \node[mm container, inner sep=2mm, fit=(rh)(r1)(r4)] {};
+  \end{pgfonlayer}
+
+\end{tikzpicture}

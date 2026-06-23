@@ -1,0 +1,54 @@
+% Pain-/Gain-Map (Discover-Phase) als TikZ-Nachbau der gleichnamigen Grafik.
+% Stil (Schrift, Groesse, Farbe) analog der uebrigen TikZ-Figures: schwarze
+% Konturen, Fuellung in Seitenfarbe (discoverPastel), schwarzer Text.
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    pgcard/.style={
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      text=mmInk, font=\scriptsize\itshape, align=left, text width=94mm,
+      inner sep=2.2mm, anchor=north west
+    },
+    pgtitle/.style={anchor=north west, font=\normalsize\bfseries\itshape, text=mmInk, inner sep=0pt}
+  ]
+
+  % ================= PAIN (linke Spalte) =================
+  \node[pgtitle] (ph) at (0,0) {PAIN};
+  \node[pgcard] (p1) at (0,-0.7)
+    {Ticketkauf-Unsicherheit: falsches Ticket, Zonen-Fehler, App zu komplex $\rightarrow$ ``fast als Schwarzfahrer dagestanden'' -- schreckt nachhaltig ab.};
+  \node[pgcard] (p2) at (0,-2.55)
+    {Mitmenschen im ÖV: Lärm (FaceTime, Musik), Gerüche (Essen), fehlende Etikette, Gedränge $\rightarrow$ vor allem auf kurzen Alltagsrouten unangenehm.};
+  \node[pgcard] (p3) at (0,-4.40)
+    {Sicherheitsgefühl: abends allein am Bahnhof, schlechte Beleuchtung, ``komische Gestalten'' $\rightarrow$ meidet ÖV nach Einbruch der Dunkelheit.};
+  \node[pgcard] (p4) at (0,-6.25)
+    {Gepäck \& Transport: schwere Einkäufe, Gartenmaterial, Werkzeug $\rightarrow$ Auto unvermeidlich; ÖV als ``zu mühsam'' wahrgenommen.};
+  \node[pgcard] (p5) at (0,-8.10)
+    {Gewohnheit als stärkstes Hindernis: Auto ist ``default'' $\rightarrow$ ÖV taucht im Entscheidungsmoment schlicht nicht auf.};
+  \node[pgcard] (p6) at (0,-9.95)
+    {App-Updates verändern die Bedienung $\rightarrow$ gelernte Wege werden zerstört, Vertrauen sinkt bei jeder Änderung.};
+  % Phantom fuer gleiche Containerhoehe wie GAIN
+  \node[inner sep=0pt] (pbot) at (0,-12.60) {};
+
+  % ================= GAIN (rechte Spalte) =================
+  \node[pgtitle] (gh) at (10.4,0) {GAIN};
+  \node[pgcard] (g1) at (10.4,-0.7)
+    {Kein Parkplatzstress in der Stadt $\rightarrow$ ÖV als klarer, rationaler Vorteil anerkannt, wenn das Auto zum Problem wird.};
+  \node[pgcard] (g2) at (10.4,-2.55)
+    {Erlebnisfahrten (GoldenPass, Nostalgiezug, Dampfbahn) $\rightarrow$ Fahrt selbst als Highlight; bereit, dafür zu zahlen und zu planen.};
+  \node[pgcard] (g3) at (10.4,-4.40)
+    {Gemeinsam mit Freunden unterwegs $\rightarrow$ soziale Dimension macht ÖV attraktiv; ``die Leute kennt man mit der Zeit schon''.};
+  \node[pgcard] (g4) at (10.4,-6.25)
+    {Zeit im Zug produktiv und angenehm: lesen, Landschaft geniessen, entspannen $\rightarrow$ nach Pensionierung kein Zeitdruck mehr.};
+  \node[pgcard] (g5) at (10.4,-8.10)
+    {Natur, Wandern, Kultur als starke Motivatoren $\rightarrow$ ÖV als idealer Zubringer zu Erlebniszielen, wenn die Verbindung klar ist.};
+  \node[pgcard] (g6) at (10.4,-9.95)
+    {Digitale Kompetenz vorhanden: ZVV-App als ``sensationell'' erlebt $\rightarrow$ echte Offenheit für digitale Begleitung bei gutem Erlebnis.};
+  \node[pgcard] (g7) at (10.4,-11.80)
+    {Sammeln, Dokumentieren, Entdecken sind verankerte Verhaltensweisen $\rightarrow$ latente Bereitschaft für spielerische Erlebnisformate.};
+
+  % ================= Hintergrund-Container =================
+  \begin{pgfonlayer}{background}
+    \node[mm container, inner sep=3mm, fit=(ph)(p1)(p6)(pbot)] {};
+    \node[mm container, inner sep=3mm, fit=(gh)(g1)(g7)] {};
+  \end{pgfonlayer}
+
+\end{tikzpicture}
