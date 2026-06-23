@@ -1,75 +1,77 @@
 \begin{tikzpicture}[x=0.50cm,y=0.50cm, font=\scriptsize]
-  % Column positions with spacing for landscape
-  \newcommand{\leftX}{-13}
-  \newcommand{\midX}{1}
-  \newcommand{\rightX}{13}
-  \newcommand{\blockSpacing}{4.0}
+  % Column anchors with equal spacing (symmetric distribution around center)
+  \newcommand{\leftX}{-17.8}
+  \newcommand{\midX}{-0.1}
+  \newcommand{\rightX}{17.4}
+  \newcommand{\blockSpacing}{6.0}
   \newcommand{\rowSpacing}{3.4}
 
   % ========== LEFT COLUMN: Was wir nicht wissen ==========
   % Row 1
-  \node[mm sub, minimum width=24mm] (L1) at (\leftX - \blockSpacing, 0) {Gute und\\schlechte ÖV};
-  \node[mm sub, minimum width=24mm] (L2) at (\leftX, 0) {Nutzung\\Mobility};
-  \node[mm sub, minimum width=24mm] (L3) at (\leftX + \blockSpacing, 0) {Beschäftigung\\Verhalten};
+  \node[mm sub, minimum width=28mm] (L1) at (\leftX - \blockSpacing/2, 0) {Gute und\\schlechte ÖV};
+  \node[mm sub, minimum width=28mm] (L2) at (\leftX + \blockSpacing/2, 0) {Nutzung\\Mobility};
   % Row 2
-  \node[mm sub, minimum width=24mm] (L4) at (\leftX - \blockSpacing, -\rowSpacing) {Verhaltens-\\gründe};
-  \node[mm sub, minimum width=24mm] (L5) at (\leftX, -\rowSpacing) {Typischer\\Tag};
-  \node[mm sub, minimum width=24mm] (L6) at (\leftX + \blockSpacing, -\rowSpacing) {Schwerpunkte\\Prioritäten};
+  \node[mm sub, minimum width=28mm] (L3) at (\leftX - \blockSpacing/2, -\rowSpacing) {Beschäftigung\\Verhalten};
+  \node[mm sub, minimum width=28mm] (L4) at (\leftX + \blockSpacing/2, -\rowSpacing) {Verhaltens-\\gründe};
   % Row 3
-  \node[mm sub, minimum width=24mm] (L7) at (\leftX - \blockSpacing, -2*\rowSpacing) {Informations-\\quellen};
-  \node[mm sub, minimum width=24mm] (L8) at (\leftX, -2*\rowSpacing) {Highlight\\Momente};
-  \node[mm sub, minimum width=24mm] (L9) at (\leftX + \blockSpacing, -2*\rowSpacing) {Wann wird\\entschieden};
+  \node[mm sub, minimum width=28mm] (L5) at (\leftX - \blockSpacing/2, -2*\rowSpacing) {Typischer\\Tag};
+  \node[mm sub, minimum width=28mm] (L6) at (\leftX + \blockSpacing/2, -2*\rowSpacing) {Schwerpunkte\\Prioritäten};
   % Row 4
-  \node[mm sub, minimum width=22mm] (L10) at (\leftX - \blockSpacing, -3*\rowSpacing) {Freizeit-\\verhalten};
-  \node[mm sub, minimum width=22mm] (L11) at (\leftX, -3*\rowSpacing) {Digitale\\Affinität};
+  \node[mm sub, minimum width=28mm] (L7) at (\leftX - \blockSpacing/2, -3*\rowSpacing) {Informations-\\quellen};
+  \node[mm sub, minimum width=28mm] (L8) at (\leftX + \blockSpacing/2, -3*\rowSpacing) {Highlight\\Momente};
+  % Row 5
+  \node[mm sub, minimum width=28mm] (L9) at (\leftX - \blockSpacing/2, -4*\rowSpacing) {Wann wird\\entschieden};
+  \node[mm sub, minimum width=26mm] (L10) at (\leftX + \blockSpacing/2, -4*\rowSpacing) {Freizeit-\\verhalten};
+  % Row 6
+  \node[mm sub, minimum width=26mm] (L11) at (\leftX, -5*\rowSpacing) {Digitale\\Affinität};
 
   % ========== CENTER COLUMN: Was wir annehmen ==========
   % Row 1
-  \node[mm sub, minimum width=24mm] (M1) at (\midX - \blockSpacing, 0) {Fehlendes\\Wissen};
-  \node[mm sub, minimum width=24mm] (M2) at (\midX, 0) {Psychologische\\Gründe};
-  \node[mm sub, minimum width=24mm] (M3) at (\midX + \blockSpacing, 0) {Gewohnheit\\Flexibilität};
+  \node[mm sub, minimum width=28mm] (M1) at (\midX - \blockSpacing, 0) {Fehlendes\\Wissen};
+  \node[mm sub, minimum width=28mm] (M2) at (\midX, 0) {Psychologische\\Gründe};
+  \node[mm sub, minimum width=28mm] (M3) at (\midX + \blockSpacing, 0) {Gewohnheit\\Flexibilität};
   % Row 2
-  \node[mm sub, minimum width=22mm] (M4) at (\midX - \blockSpacing, -\rowSpacing) {Physische\\Barrieren};
-  \node[mm sub, minimum width=22mm] (M5) at (\midX, -\rowSpacing) {Erlebnis-\\orientiert};
-  \node[mm sub, minimum width=24mm] (M6) at (\midX + \blockSpacing, -\rowSpacing) {Nicht als\\Senior};
+  \node[mm sub, minimum width=26mm] (M4) at (\midX - \blockSpacing, -\rowSpacing) {Physische\\Barrieren};
+  \node[mm sub, minimum width=26mm] (M5) at (\midX, -\rowSpacing) {Erlebnis-\\orientiert};
+  \node[mm sub, minimum width=28mm] (M6) at (\midX + \blockSpacing, -\rowSpacing) {Nicht als\\Senior};
   % Row 3
-  \node[mm sub, minimum width=20mm] (M7) at (\midX - \blockSpacing, -2*\rowSpacing) {Auto =\\Freiheit};
-  \node[mm sub, minimum width=20mm] (M8) at (\midX, -2*\rowSpacing) {Zugang\\zu ÖV};
-  \node[mm sub, minimum width=22mm] (M9) at (\midX + \blockSpacing, -2*\rowSpacing) {Ländlich:\\schlechter};
+  \node[mm sub, minimum width=24mm] (M7) at (\midX - \blockSpacing, -2*\rowSpacing) {Auto =\\Freiheit};
+  \node[mm sub, minimum width=24mm] (M8) at (\midX, -2*\rowSpacing) {Zugang\\zu ÖV};
+  \node[mm sub, minimum width=26mm] (M9) at (\midX + \blockSpacing, -2*\rowSpacing) {Ländlich:\\schlechter};
   % Row 4
-  \node[mm sub, minimum width=22mm] (M10) at (\midX - \blockSpacing, -3*\rowSpacing) {Status-\\symbol};
-  \node[mm sub, minimum width=24mm] (M11) at (\midX, -3*\rowSpacing) {1. Behavioral\\Assumptions};
-  \node[mm sub, minimum width=22mm] (M12) at (\midX + \blockSpacing, -3*\rowSpacing) {2. Social\\Influence};
+  \node[mm sub, minimum width=26mm] (M10) at (\midX - \blockSpacing, -3*\rowSpacing) {Status-\\symbol};
+  \node[mm sub, minimum width=28mm] (M11) at (\midX, -3*\rowSpacing) {1. Behavioral\\Assumptions};
+  \node[mm sub, minimum width=26mm] (M12) at (\midX + \blockSpacing, -3*\rowSpacing) {2. Social\\Influence};
   % Row 5
-  \node[mm sub, minimum width=24mm] (M13) at (\midX, -4*\rowSpacing) {3. Context:\\Wetter/Ziel};
+  \node[mm sub, minimum width=28mm] (M13) at (\midX, -4*\rowSpacing) {3. Context:\\Wetter/Ziel};
 
   % ========== RIGHT COLUMN: Was wir wissen ==========
   % Row 1
-  \node[mm sub, minimum width=24mm] (R1) at (\rightX - \blockSpacing/2, 0) {Züge nicht\\ausgelastet};
-  \node[mm sub, minimum width=24mm] (R2) at (\rightX + \blockSpacing/2, 0) {Auto als\\Hauptmittel};
+  \node[mm sub, minimum width=28mm] (R1) at (\rightX - \blockSpacing/2, 0) {Züge nicht\\ausgelastet};
+  \node[mm sub, minimum width=28mm] (R2) at (\rightX + \blockSpacing/2, 0) {Auto als\\Hauptmittel};
   % Row 2
-  \node[mm sub, minimum width=24mm] (R3) at (\rightX - \blockSpacing/2, -\rowSpacing) {ÖV-Angebot\\unzureichend};
-  \node[mm sub, minimum width=22mm] (R4) at (\rightX + \blockSpacing/2, -\rowSpacing) {ZVV kennt\\Kunden};
+  \node[mm sub, minimum width=28mm] (R3) at (\rightX - \blockSpacing/2, -\rowSpacing) {ÖV-Angebot\\unzureichend};
+  \node[mm sub, minimum width=26mm] (R4) at (\rightX + \blockSpacing/2, -\rowSpacing) {ZVV kennt\\Kunden};
   % Row 3
-  \node[mm sub, minimum width=20mm] (R5) at (\rightX - \blockSpacing/2, -2*\rowSpacing) {Kaufkräftig};
-  \node[mm sub, minimum width=20mm] (R6) at (\rightX + \blockSpacing/2, -2*\rowSpacing) {Auto-\\kosten};
+  \node[mm sub, minimum width=24mm] (R5) at (\rightX - \blockSpacing/2, -2*\rowSpacing) {Kaufkräftig};
+  \node[mm sub, minimum width=24mm] (R6) at (\rightX + \blockSpacing/2, -2*\rowSpacing) {Auto-\\kosten};
 
   % ========== PADDING NODES for title space ==========
-  \node[inner sep=0pt, minimum height=0pt] (padLeft) at (\leftX, 2.8) {};
-  \node[inner sep=0pt, minimum height=0pt] (padMid) at (\midX, 2.8) {};
-  \node[inner sep=0pt, minimum height=0pt] (padRight) at (\rightX, 2.8) {};
+  \node[inner sep=0pt, minimum height=0pt] (padLeft) at (\leftX, 3.6) {};
+  \node[inner sep=0pt, minimum height=0pt] (padMid) at (\midX, 3.6) {};
+  \node[inner sep=0pt, minimum height=0pt] (padRight) at (\rightX, 3.6) {};
 
   % ========== CONTAINERS (background layer) ==========
   \begin{pgfonlayer}{background}
     % Left container
-    \node[mm container, fit=(padLeft)(L1)(L3)(L10)(L11),
-      inner sep=4mm, fill=red!10] (cLeft) {};
+    \node[mm container, fit=(padLeft)(L1)(L2)(L10)(L11),
+      inner sep=4mm, fill=none] (cLeft) {};
     % Center container
     \node[mm container, fit=(padMid)(M1)(M3)(M13),
-      inner sep=4mm, fill=orange!15] (cMid) {};
+      inner sep=4mm, fill=none] (cMid) {};
     % Right container
     \node[mm container, fit=(padRight)(R1)(R2)(R5)(R6),
-      inner sep=4mm, fill=green!10] (cRight) {};
+      inner sep=4mm, fill=none] (cRight) {};
   \end{pgfonlayer}
 
   % ========== CONTAINER HEADERS ==========
