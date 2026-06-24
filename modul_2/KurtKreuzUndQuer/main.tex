@@ -7,11 +7,13 @@
 \usepackage{microtype}
 \usepackage[a4paper,landscape,margin=2.5cm]{geometry}
 \usepackage{graphicx}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{tabularx}
+\usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{csquotes}
 \usepackage{adjustbox}
@@ -30,6 +32,12 @@
 \definecolor{developPastel}{HTML}{FFE8D6}
 \definecolor{deliverPastel}{HTML}{EAF0F7}
 \definecolor{defaultPastel}{HTML}{F1E7FF}
+
+% Quadranten-Farben fuer das Feedback Capture Grid
+\definecolor{fbPositiv}{HTML}{D6EAD4}
+\definecolor{fbOptimieren}{HTML}{FAD9BE}
+\definecolor{fbFragen}{HTML}{CFE3F7}
+\definecolor{fbIdeen}{HTML}{E4D4F7}
 
 \input{sections/figures/mindmap_style}
 
@@ -84,6 +92,26 @@
   \end{center}
   \newpage
   \begin{multicols}{2}%
+}
+
+% Feedback Capture Grid als 2x2-Raster ueber volle Breite.
+% Argumente: #1 Positiv, #2 Optimieren, #3 Fragen, #4 Ideen
+\newcommand{\FeedbackGrid}[4]{%
+  {\renewcommand{\arraystretch}{1.35}%
+  \setlength{\tabcolsep}{6pt}%
+  \noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+    \hline
+    \cellcolor{fbPositiv}\textbf{Positiv -- Was funktioniert gut?} &
+    \cellcolor{fbOptimieren}\textbf{Optimieren -- Was kann verbessert werden?} \\
+    \hline
+    #1 & #2 \\
+    \hline
+    \cellcolor{fbFragen}\textbf{Fragen -- Welche Fragen kommen auf?} &
+    \cellcolor{fbIdeen}\textbf{Ideen -- Wie koennte es aussehen?} \\
+    \hline
+    #3 & #4 \\
+    \hline
+  \end{tabularx}}%
 }
 
 \pagestyle{fancy}
@@ -154,6 +182,13 @@
 \section{Deliver Phase}
 \begin{multicols}{2}
 \input{sections/deliver}
+\end{multicols}
+\newpage
+
+\pagecolor{defaultPastel}
+\section{Fazit und Ausblick}
+\begin{multicols}{2}
+\input{sections/fazit}
 \end{multicols}
 
 \newpage
