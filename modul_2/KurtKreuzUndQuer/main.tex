@@ -19,6 +19,9 @@
 \usepackage{adjustbox}
 \usepackage{pdflscape}
 \usepackage{parskip}
+\usepackage{longtable}
+\usepackage{pdfpages}
+\usepackage{twemojis}
 \usepackage[acronym]{glossaries}
 \usepackage[backend=biber,style=apa,sortcites=true,sorting=nyt]{biblatex}
 \DeclareLanguageMapping{ngerman}{ngerman-apa}
@@ -33,6 +36,7 @@
 \definecolor{developPastel}{HTML}{FFE8D6}
 \definecolor{deliverPastel}{HTML}{EAF0F7}
 \definecolor{defaultPastel}{HTML}{F1E7FF}
+\definecolor{anhangPastel}{HTML}{E9E9EC}
 
 % Quadranten-Farben fuer das Feedback Capture Grid
 \definecolor{fbPositiv}{HTML}{D6EAD4}
@@ -213,6 +217,11 @@
 \nocite{*}
 \printbibliography[heading=none]
 
-\pagecolor{defaultPastel}
+\newpage
+\pagecolor{anhangPastel}
+\section{Anhang}
+\input{sections/anhang}
+
+\pagecolor{anhangPastel}
 
 \end{document}
