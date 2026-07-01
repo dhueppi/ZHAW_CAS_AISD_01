@@ -7,6 +7,7 @@
   \newcommand{\rowSpacing}{3.4}
 
   % ========== LEFT COLUMN: Was wir nicht wissen ==========
+  \begin{scope}[mm sub/.append style={fill=discoverPastel}]
   % Row 1
   \node[mm sub, minimum width=28mm] (L1) at (\leftX - \blockSpacing/2, 0) {Gute und\\schlechte ÖV};
   \node[mm sub, minimum width=28mm] (L2) at (\leftX + \blockSpacing/2, 0) {Nutzung\\Mobility};
@@ -24,8 +25,10 @@
   \node[mm sub, minimum width=26mm] (L10) at (\leftX + \blockSpacing/2, -4*\rowSpacing) {Freizeit-\\verhalten};
   % Row 6
   \node[mm sub, minimum width=26mm] (L11) at (\leftX, -5*\rowSpacing) {Digitale\\Affinität};
+  \end{scope}
 
   % ========== CENTER COLUMN: Was wir annehmen ==========
+  \begin{scope}[mm sub/.append style={fill=developPastel}]
   % Row 1
   \node[mm sub, minimum width=28mm] (M1) at (\midX - \blockSpacing, 0) {Fehlendes\\Wissen};
   \node[mm sub, minimum width=28mm] (M2) at (\midX, 0) {Psychologische\\Gründe};
@@ -44,8 +47,10 @@
   \node[mm sub, minimum width=26mm] (M12) at (\midX + \blockSpacing, -3*\rowSpacing) {2. Social\\Influence};
   % Row 5
   \node[mm sub, minimum width=28mm] (M13) at (\midX, -4*\rowSpacing) {3. Context:\\Wetter/Ziel};
+  \end{scope}
 
   % ========== RIGHT COLUMN: Was wir wissen ==========
+  \begin{scope}[mm sub/.append style={fill=definePastel}]
   % Row 1
   \node[mm sub, minimum width=28mm] (R1) at (\rightX - \blockSpacing/2, 0) {Züge nicht\\ausgelastet};
   \node[mm sub, minimum width=28mm] (R2) at (\rightX + \blockSpacing/2, 0) {Auto als\\Hauptmittel};
@@ -55,6 +60,7 @@
   % Row 3
   \node[mm sub, minimum width=24mm] (R5) at (\rightX - \blockSpacing/2, -2*\rowSpacing) {Kaufkräftig};
   \node[mm sub, minimum width=24mm] (R6) at (\rightX + \blockSpacing/2, -2*\rowSpacing) {Auto-\\kosten};
+  \end{scope}
 
   % ========== PADDING NODES for title space ==========
   \node[inner sep=0pt, minimum height=0pt] (padLeft) at (\leftX, 3.6) {};

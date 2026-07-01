@@ -1,0 +1,38 @@
+% Double Diamond (horizontal, kompakt) mit vorgeschalteter Identify-Phase.
+% Farben je Phase analog der Seitenfarben; Schrift bewusst unskaliert,
+% die Groesse wird ausschliesslich ueber die Geometrie gesteuert.
+\definecolor{ddBlue}{HTML}{1F4E9C}
+\definecolor{ddRed}{HTML}{B23A3A}
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    ddoutline/.style={draw=ddBlue, line join=round, line width=1.2pt},
+    ddflow/.style={draw=ddBlue, line width=1.2pt, -{Latex[length=2.4mm]}},
+    ddlabel/.style={text=mmInk, font=\normalsize\bfseries, inner sep=1.5pt}
+  ]
+
+  % ---- Identify (Vor-Phase) ----
+  \fill[identifyPastel, rounded corners=2pt] (-0.25,-0.85) rectangle (0.5,0.85);
+  \draw[draw=ddRed, line width=1.1pt, rounded corners=2pt] (-0.25,-0.85) rectangle (0.5,0.85);
+  \node[ddlabel, rotate=90] at (0.125,0) {Identify};
+
+  % ---- Erster Diamant: Discover (divergierend) / Define (konvergierend) ----
+  \fill[discoverPastel] (0.85,0) -- (2.35,0.9) -- (2.35,-0.9) -- cycle;
+  \fill[definePastel]   (2.35,0.9) -- (3.85,0) -- (2.35,-0.9) -- cycle;
+  \draw[ddoutline] (0.85,0) -- (2.35,0.9) -- (3.85,0) -- (2.35,-0.9) -- cycle;
+
+  % ---- Zweiter Diamant: Develop (divergierend) / Deliver (konvergierend) ----
+  \fill[developPastel] (4.25,0) -- (5.75,0.9) -- (5.75,-0.9) -- cycle;
+  \fill[deliverPastel] (5.75,0.9) -- (7.25,0) -- (5.75,-0.9) -- cycle;
+  \draw[ddoutline] (4.25,0) -- (5.75,0.9) -- (7.25,0) -- (5.75,-0.9) -- cycle;
+
+  % ---- Flusspfeile von links nach rechts ----
+  \draw[ddflow] (0.55,0) -- (0.82,0);
+  \draw[ddflow] (3.88,0) -- (4.22,0);
+  \draw[ddflow] (7.28,0) -- (7.75,0);
+
+  % ---- Phasenlabels: Divergenz oben, Konvergenz unten ----
+  \node[ddlabel, anchor=south] at (1.6,1.05) {Discover};
+  \node[ddlabel, anchor=south] at (5.0,1.05) {Develop};
+  \node[ddlabel, anchor=north] at (3.1,-1.05) {Define};
+  \node[ddlabel, anchor=north] at (6.5,-1.05) {Deliver};
+\end{tikzpicture}

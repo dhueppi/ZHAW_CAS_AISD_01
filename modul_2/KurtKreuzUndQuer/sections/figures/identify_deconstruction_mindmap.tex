@@ -1,6 +1,20 @@
-\begin{tikzpicture}[x=0.90cm,y=1.10cm]
+\begin{tikzpicture}[x=0.90cm,y=1.10cm,
+    mm topic red/.append style={fill=identifyPastel},
+    mm sub red/.append style={fill=identifyPastel},
+    mm topic orange/.append style={fill=developPastel},
+    mm sub orange/.append style={fill=developPastel},
+    mm topic dark/.append style={fill=deliverPastel},
+    mm sub dark/.append style={fill=deliverPastel},
+    mm topic brown/.append style={fill=anhangPastel},
+    mm sub brown/.append style={fill=anhangPastel},
+    mm topic magenta/.append style={fill=defaultPastel},
+    mm sub magenta/.append style={fill=defaultPastel},
+    mm topic purple/.append style={fill=definePastel},
+    mm sub purple/.append style={fill=definePastel},
+    mm topic greyblue/.append style={fill=discoverPastel},
+    mm sub greyblue/.append style={fill=discoverPastel}]
   % Center
-  \node[mm central] (center) at (0,0) {Deconstruction\\\gls{zvv} Case};
+  \node[mm central, fill=white] (center) at (0,0) {Deconstruction\\\gls{zvv} Case};
 
   % Main branches
   \node[mm topic red] (kanton) at (-3.0,4.2) {Kanton Zürich};
