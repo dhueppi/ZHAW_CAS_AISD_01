@@ -99,6 +99,25 @@
   \begin{multicols}{2}%
 }
 
+% Column-width (half-page) image/figure INSIDE the multicols body.
+% Flows in the current column (left or right, wherever the text currently is);
+% non-floating, so it stays exactly where it is placed.
+% Height is capped so image + caption never overflow into the footer.
+% Usage: \ColumnFigure[<width>]{<path>}{<caption>}   (default width = column width)
+\newcommand{\ColumnFigure}[3][\linewidth]{%
+  \par\medskip
+  \begin{center}
+    \IfFileExists{#2.tex}{%
+      \adjustbox{max width=#1,max totalheight=0.85\textheight}{\input{#2}}%
+    }{%
+      \adjustbox{max width=#1,max totalheight=0.85\textheight}{\includegraphics{#2}}%
+    }
+    \captionsetup{type=figure,justification=centering}
+    \captionof{figure}{#3}
+  \end{center}
+  \par\medskip
+}
+
 % Feedback Capture Grid als 2x2-Raster ueber volle Breite.
 % Argumente: #1 Positiv, #2 Optimieren, #3 Fragen, #4 Ideen
 \newcommand{\FeedbackGrid}[4]{%
@@ -133,7 +152,7 @@
 
 \maketitle
 \begin{center}
-  \includegraphics[height=0.65\textheight,keepaspectratio]{ressourcen/einleitung/titelbild.png}
+  \includegraphics[height=0.65\textheight,keepaspectratio]{ressourcen/einleitung/titelbild_v2.png}
 \end{center}
 \thispagestyle{empty}
 \newpage
