@@ -76,7 +76,7 @@ Ein One-Size-Fits-All-Ansatz funktioniert nicht.
 Der Weg ist Teil des Erlebnisses.
 
 \subsubsection{Visualisierung der Challenge Deconstruction}
-Die Mindmap basiert auf der von der Arbeitsgruppe erstellten Deconstruction-Mindmap und ist als skalierbare Vektorgrafik in LaTeX nachgebaut.
+Die Mindmap basiert auf der von der Arbeitsgruppe erstellten Deconstruction-Mindmap.
 Sie verdichtet die zentralen Begriffe der Design Challenge und macht Zusammenhänge, Annahmen und Spannungsfelder auf einen Blick sichtbar.
 \newpage
 
@@ -88,31 +88,42 @@ Die Stakeholder Map erfasst alle relevanten Akteure in konzentrischen Kreisen, v
 
 \textbf{Primäre Nutzende (Zentrum):}
 Im innersten Kreis stehen zwei zentrale Gruppen:
-Vitale, autoabhängige Senioren (65--79 Jahre) als Hauptzielgruppe: mobil, kaufkräftig, gewohnheitsgeprägt.
-Bereits öV-fahrende Senioren als Referenzgruppe: wertvoll für Erfahrungsaustausch und Peer-Motivation.
+
+\begin{itemize}
+  \item Vitale, autoabhängige Senioren (65--79 Jahre) als Hauptzielgruppe: mobil, kaufkräftig, gewohnheitsgeprägt.
+  \item Bereits öV-fahrende Senioren als Referenzgruppe: wertvoll für Erfahrungsaustausch und Peer-Motivation.
+\end{itemize}
+
 Zusätzlich erfasst die Map das soziale Umfeld (Partner, Familie, Freunde, Kinder) als entscheidende Einflussgrösse.
 Ein erstes Kernergebnis deutet sich ab: Der Mobilitätsentscheid ist oft nicht individuell, das Umfeld beeinflusst die Wahl stark.
 
 \textbf{Schlüssel-Partner (mittlerer Kreis):}
 Die Stakeholder Map identifiziert diverse Partnerorganisationen:
-\gls{zvv} (Auftraggeber): Koordination, Kommunikation, Marke, aber kein direktes Fahrerlebnis.
-Verkehrsunternehmen (\gls{sbb}, \gls{zsg}, weitere Verbunde): Das Fahrerlebnis entsteht hier, nicht beim \gls{zvv}.
-Pro Senectute und Verein Zürcher Seniorinnen und Senioren: grösste Seniorenorganisationen mit existierendem Vertrauen und direktem Zugang.
-Gemeinden und Quartierzentren: niederschwelliger physischer Zugang, besonders für Offline-Senioren.
-Alltagsnahe Kontaktpunkte (Apotheken, Bibliotheken, Hausärzte): Vertrauenspersonen im Alltag, geeignet für analoge Infovermittlung.
-Freizeitanbieter: Kultur, Sport, Kulinarik, Ausflugsziele als potenzielle Kooperationspartner.
-``Invisible Influencers'' (Ärzte, Gemeinden, Versicherungen, Medien): prägen das gesellschaftliche Bild von Senioren und Mobilität, ohne selbst Angebote zu schaffen.
+
+
+\begin{itemize}
+  \item \gls{zvv} (Auftraggeber): Koordination, Kommunikation, Marke, aber kein direktes Fahrerlebnis.
+  \item Verkehrsunternehmen (\gls{sbb}, \gls{zsg}, weitere Verbunde): Das Fahrerlebnis entsteht hier, nicht beim \gls{zvv}.
+  \item Pro Senectute und Verein Zürcher Seniorinnen und Senioren: grösste Seniorenorganisationen mit existierendem Vertrauen und direktem Zugang.
+  \item Gemeinden und Quartierzentren: niederschwelliger physischer Zugang, besonders für Offline-Senioren.
+  \item Alltagsnahe Kontaktpunkte (Apotheken, Bibliotheken, Hausärzte): Vertrauenspersonen im Alltag, geeignet für analoge Infovermittlung.
+  \item Freizeitanbieter: Kultur, Sport, Kulinarik, Ausflugsziele als potenzielle Kooperationspartner.
+  \item ``Invisible Influencers'' (Ärzte, Gemeinden, Versicherungen, Medien): prägen das gesellschaftliche Bild von Senioren und Mobilität, ohne selbst Angebote zu schaffen.
+\end{itemize}
 
 \textbf{Weiteres Umfeld (äusserer Kreis):}
-Bund und Kantone (Regulierung, Förderung, Mobilitätspolitik).
-Tourismusorganisationen (Freizeitziele und Ausflugspakete als Motivationsanker).
-Autolobby (Gegenspieler im Narrativ).
-Gesellschaft Schweiz (Normen rund um Mobilität, Selbständigkeit und Alter).
+\begin{itemize}
+  \item Bund und Kantone (Regulierung, Förderung, Mobilitätspolitik).
+  \item Tourismusorganisationen (Freizeitziele und Ausflugspakete als Motivationsanker).
+  \item Autolobby (Gegenspieler im Narrativ).
+  \item Gesellschaft Schweiz (Normen rund um Mobilität, Selbständigkeit und Alter).
+\end{itemize}
 
 \textbf{Zentrale Erkenntnisse:}
 Kernergebnis: Der \gls{zvv} erreicht diese Zielgruppe vermutlich nicht allein.
 Partnerorganisationen mit bestehendem Vertrauen spielen eine entscheidende Rolle.
 Das soziale Umfeld, Partner, Familie und Freunde, hat einen grösseren Einfluss auf den Mobilitätsentscheid, als die Fragestellung zunächst vermuten lässt.
+Gerade offline-affine Senioren sind über digitale Kanäle kaum erreichbar, hier sind physische Partnerorganisationen und niederschwellige Kontaktpunkte entscheidend.
 
 \FullWidthFigure[\textwidth]{sections/figures/stakeholder_map}{Stakeholder Map des \gls{zvv}-Praxis-Case (eigene Darstellung)}
 
@@ -120,56 +131,77 @@ Das soziale Umfeld, Partner, Familie und Freunde, hat einen grösseren Einfluss 
 
 Wir werten die wichtigsten Schweizer Quellen aus: Bevölkerungsstatistik, Mobilitätsdaten und digitale Nutzung, differenziert nach Segmenten.
 
-\textbf{Demografische Ausgangslage} \parencite{statzh2023,zvvbriefing2026}\textbf{:}
-Im Kanton Zürich leben rund 327'000 Personen über 65 Jahre (21\% der Gesamtbevölkerung), Anstieg auf 420'000 bis 2040.
-Hebelsegment aktive Senioren (65--79): 190'000 Personen, kaufkräftig (median CHF 420'000).
-Offline-Senioren: ca. 30'000 Personen, ausschliesslich auf analoge Kanäle angewiesen.
+\textbf{Demografische Ausgangslage} \parencite{statzh2023,zvvbriefing2026}
+\begin{itemize}
+  \item Rund 327'000 Personen über 65 Jahre (21\% der Gesamtbevölkerung), Anstieg auf 420'000 bis 2040.
+  \item Hebelsegment aktive Senioren (65--79): 190'000 Personen, kaufkräftig.
+  \item Offline-Senioren: ca. 30'000 Personen, ausschliesslich auf analoge Kanäle angewiesen.
+\end{itemize}
 
-\textbf{Mobilitätsverhalten nach Segment} \parencite{bfsare2021,zvvbriefing2026}\textbf{:}
-Aktive Senioren (65--75 Jahre): durchschnittlich 27,4 km pro Tag, 57\% Auto, 18\% öV, über 60\% der Freizeitfahrten mit Auto.
-78\% aller Ü65 in der Nebenverkehrszeit unterwegs (ideal für \gls{zvv}).
-Hauptmotive gegen öV: Flexibilität (38\%), Bequemlichkeit (27\%).
+\textbf{Mobilitätsverhalten nach Segment} \parencite{bfsare2021,zvvbriefing2026}
+\begin{itemize}
+  \item Aktive Senioren (65--79 Jahre): durchschnittlich 27,4 km pro Tag, davon 57\% Auto und 18\% öV; über 60\% der Freizeitfahrten mit dem Auto.
+  \item 78\% aller Ü65 sind in der Nebenverkehrszeit unterwegs (ideal für den \gls{zvv}).
+  \item Hauptmotive gegen den öV: Flexibilität (38\%) und Bequemlichkeit (27\%).
+  \item Betagte Senioren (75--85 Jahre): nur 11 km/Tag, Mobilitätsradius schrumpft, öV-Anteil steigt auf 22\%.
+  \item Stadt-Land-Gefälle: Stadt 28\% öV, ländlich 11\%.
+\end{itemize}
 
-Betagte Senioren (75--85): nur 11 km/Tag, Mobilitätsradius schrumpft, öV-Anteil steigt auf 22\%.
-Stadt-Land-Gefälle: Stadt 28\% öV, ländlich 11\%.
+\columnbreak
+\textbf{Digitale Nutzung nach Segment} \parencite{sotomo2021}
+\begin{itemize}
+  \item Aktive Senioren (65--79 Jahre): 84\% Internet, 74\% Smartphone, digitale Kanäle gut erreichbar.
+  \item Betagte Senioren (75--85 Jahre): 62\% Internet, 49\% Smartphone, die Lücke wächst, analoge Ergänzung nötig.
+  \item Offline-Senioren: unter 25\%, ausschliesslich analoge Kanäle.
+\end{itemize}
 
-\textbf{Digitale Nutzung nach Segment} \parencite{sotomo2021}\textbf{:}
-Aktive 65--74 Jahre: 84\% Internet, 74\% Smartphone, digitale Kanäle gut erreichbar.
-Betagte 75--84: 62\% Internet, 49\% Smartphone, die Lücke wächst, analoge Ergänzung nötig.
-Offline-Senioren: unter 25\%, ausschliesslich analoge Kanäle.
+\textbf{Der kritische Moment: Führerscheinabgabe}
+\begin{itemize}
+  \item Ca. 8'000--10'000 Personen geben den Führerschein pro Jahr ab, ein starkes Aktivierungsfenster.
+  \item Nur 34\% bereiten sich mit öV-Alternativen vor; eine frühe Vorbereitung (+1 Jahr) erhöht die spätere öV-Nutzung deutlich.
+  \item Barrieren: Orientierungslosigkeit (43\%), Sicherheitsbedenken (28\%).
+\end{itemize}
 
-\textbf{Der kritische Moment: Führerscheinabgabe:}
-Ca. 8'000--10'000 Personen geben den Führerschein pro Jahr ab, ein starkes Aktivierungsfenster.
-Nur 34\% bereiten sich mit öV-Alternativen vor, frühe Vorbereitung (+1 Jahr) erhöht spätere öV-Nutzung deutlich.
-Barrieren: Orientierungslosigkeit (43\%), Sicherheitsbedenken (28\%).
+\textbf{Nutzungsbarrieren für den öV}
+\begin{itemize}
+  \item \textbf{Psychologisch:} Auto = Freiheit/Spontanität, öV = Abhängigkeit; Gewohnheit, erste negative Erfahrung wirkt dauerhaft.
+  \item \textbf{Praktisch:} Gepäck, Wetter, letzte Meile, Planung erforderlich.
+  \item \textbf{Systemisch:} Tarifkomplexität, digitale Ausschlüsse, abbauende Schalter, schwache Kommunikation für diese Zielgruppe.
+\end{itemize}
 
-\textbf{Nutzungsbarrieren für den öV:}
-Psychologisch: Auto = Freiheit/Spontanität, öV = Abhängigkeit, Gewohnheit, erste negative Erfahrung wirkt dauerhaft.
-Praktisch: Gepäck, Wetter, letzte Meile, Planung erforderlich.
-Systemisch: Tarifkomplexität, digitale Ausschlüsse, abbauende Schalter, schwache Kommunikation für diese Zielgruppe.
-
+\columnbreak
+\columnbreak
 \subsubsection{Ergebnisse und Visualisierung der Design Space Map}
 
 Die Design Space Map ordnet den gesamten Wissensstand in einem dreigeteilten Raster und macht damit die nächsten Forschungsschritte transparent:
 
-\textbf{Rechte Spalte, was wir wissen:}
-Züge sind nicht ausgelastet in der Nebenverkehrszeit (NVZ-Potenzial vorhanden), das Auto dominiert die Zielgruppe, der ZVV erreicht sie damit nicht ausreichend.
-Demografisch: kaufkräftig mit hohem Vermögen, digitalaffin 65-74 Jahre (danach Abnahme).
-Geographisch: Urban guter öV-Zugang, ländlich schwach.
+\textbf{Rechte Spalte, was wir wissen}
+\begin{itemize}
+  \item Züge sind in der Nebenverkehrszeit nicht ausgelastet.
+  \item Das Auto dominiert die Zielgruppe.
+  \item Demografisch: kaufkräftig mit hohem Vermögen, digitalaffinität nimmt ab.
+  \item Geographisch: urban guter öV-Zugang, ländlich schwach.
+\end{itemize}
 
-\textbf{Mittlere Spalte, was wir annehmen:}
-Das Auto steht für Freiheit, Kontrolle und Spontanität, der öV für Abhängigkeit.
-Eine erste negative Erfahrung wirkt dauerhaft.
-Social Influence (Partner, Familie) hat grossen Einfluss.
-Physische Barrieren: Gepäck, Wetter, letzte Meile, Planung vs. Spontanität.
+\textbf{Mittlere Spalte, was wir annehmen}
+\begin{itemize}
+  \item Das Auto steht für Freiheit, Kontrolle und Spontanität.
+  \item Eine erste negative Erfahrung wirkt dauerhaft.
+  \item Social Influence (Partner, Familie) hat grossen Einfluss.
+  \item Physische Barrieren: Gepäck, Wetter, letzte Meile, Planung.
+\end{itemize}
 
-\textbf{Linke Spalte, was wir nicht wissen:}
-Konkrete positive/negative öV-Erlebnisse, Verhaltensgründe, Tagesablauf, Informationsquellen, Entscheidungszeitpunkte, spezifische Motivatoren je Segment.
+\textbf{Linke Spalte, was wir nicht wissen}
+\begin{itemize}
+  \item Konkrete positive/negative öV-Erlebnisse.
+  \item Verhaltensgründe und Entscheidungszeitpunkte.
+  \item Tagesablauf und Informationsquellen.
+  \item Spezifische Motivatoren je Segment.
+\end{itemize}
 
 Mit diesem Wissensstand starten wir die Discover-Phase, diese offenen Fragen und Annahmen bilden direkt die Grundlage für den Interviewleitfaden.
 
-\FullWidthFigure[\textwidth]{sections/figures/design_space_map}{Design Space Map des \gls{zvv}-Praxis-Case (eigene Darstellung)}
-
+\columnbreak
 \subsection{Reflexion der Methode}
 
 Die Kombination aus Challenge Deconstruction, Stakeholder Map, Desk Research und Design Space Map erweist sich als sinnvoll, um vom breiten Problemraum zu einem klar strukturierten Forschungsauftrag zu gelangen.
@@ -187,3 +219,5 @@ Rückblickend passen wir zwei Aspekte an.
 Erstens versehen wir die Stakeholder Map stärker mit Hypothesen über Einflussrichtungen (z.\,B. ``Partner beeinflusst Verkehrsmittelwahl positiv/negativ''), um in den Interviews gezielter nachfragen zu können.
 Zweitens ist der Desk Research zeitlich knapp bemessen.
 Eine systematischere Literaturrecherche zu Verhaltensänderungsmodellen (etwa Transtheoretisches Modell oder Theory of Planned Behaviour) schärft die Annahmen in der Design Space Map bereits früher theoretisch.
+
+\FullWidthFigure[\textwidth]{sections/figures/design_space_map}{Design Space Map des \gls{zvv}-Praxis-Case (eigene Darstellung)}
