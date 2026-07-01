@@ -4,46 +4,51 @@
 \begin{tikzpicture}[
     x=1cm, y=1cm,
     pgcard/.style={
-      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=developPastel,
       text=mmInk, font=\scriptsize\itshape, align=left, text width=94mm,
       inner sep=2.2mm, anchor=north west
     },
-    pgtitle/.style={anchor=north west, font=\normalsize\bfseries\itshape, text=mmInk, inner sep=0pt}
+    pgtitle/.style={anchor=north west, font=\normalsize\bfseries\itshape, text=mmInk, inner sep=0pt},
+    quote/.style={font=\scriptsize\itshape}
   ]
 
   % ================= PAIN (linke Spalte) =================
+  \begin{scope}[xshift=-0.5cm]
   \node[pgtitle] (ph) at (0,0) {PAIN};
   \node[pgcard] (p1) at (0,-0.7)
-    {Ticketkauf-Unsicherheit: falsches Ticket, Zonen-Fehler, App zu komplex $\rightarrow$ ``fast als Schwarzfahrer dagestanden'' -- schreckt nachhaltig ab.};
+    {Ticketkauf-Unsicherheit: falsches Ticket, Zonen-Fehler, App zu komplex $\rightarrow$ ``fast als Schwarzfahrer dagestanden'' -- schreckt nachhaltig ab. {\quote(P.\,Büki, Margrit)}};
   \node[pgcard] (p2) at (0,-2.55)
-    {Mitmenschen im ÖV: Lärm (FaceTime, Musik), Gerüche (Essen), fehlende Etikette, Gedränge $\rightarrow$ vor allem auf kurzen Alltagsrouten unangenehm.};
+    {Mitmenschen im ÖV: Lärm (FaceTime, Musik), Gerüche (Essen), fehlende Etikette, Gedränge $\rightarrow$ vor allem auf kurzen Alltagsrouten unangenehm. {\quote(Margrit)}};
   \node[pgcard] (p3) at (0,-4.40)
-    {Sicherheitsgefühl: abends allein am Bahnhof, schlechte Beleuchtung, ``komische Gestalten'' $\rightarrow$ meidet ÖV nach Einbruch der Dunkelheit.};
+    {Sicherheitsgefühl: abends allein am Bahnhof, schlechte Beleuchtung, ``komische Gestalten'' $\rightarrow$ meidet ÖV nach Einbruch der Dunkelheit. {\quote(Margrit)}};
   \node[pgcard] (p4) at (0,-6.25)
-    {Gepäck \& Transport: schwere Einkäufe, Gartenmaterial, Werkzeug $\rightarrow$ Auto unvermeidlich; ÖV als ``zu mühsam'' wahrgenommen.};
+    {Gepäck \& Transport: schwere Einkäufe, Gartenmaterial, Werkzeug $\rightarrow$ Auto unvermeidlich; ÖV als ``zu mühsam'' wahrgenommen. {\quote(Margrit)}};
   \node[pgcard] (p5) at (0,-8.10)
-    {Gewohnheit als stärkstes Hindernis: Auto ist ``default'' $\rightarrow$ ÖV taucht im Entscheidungsmoment schlicht nicht auf.};
+    {Gewohnheit als stärkstes Hindernis: Auto ist ``default'' $\rightarrow$ ÖV taucht im Entscheidungsmoment schlicht nicht auf. {\quote(Christian, Christof, Edna)}};
   \node[pgcard] (p6) at (0,-9.95)
-    {App-Updates verändern die Bedienung $\rightarrow$ gelernte Wege werden zerstört, Vertrauen sinkt bei jeder Änderung.};
+    {App-Updates verändern die Bedienung $\rightarrow$ gelernte Wege werden zerstört, Vertrauen sinkt bei jeder Änderung. {\quote(Margrit)}};
   % Phantom fuer gleiche Containerhoehe wie GAIN
   \node[inner sep=0pt] (pbot) at (0,-12.60) {};
+  \end{scope}
 
   % ================= GAIN (rechte Spalte) =================
+  \begin{scope}[xshift=0.5cm, pgcard/.append style={fill=definePastel}]
   \node[pgtitle] (gh) at (10.4,0) {GAIN};
   \node[pgcard] (g1) at (10.4,-0.7)
-    {Kein Parkplatzstress in der Stadt $\rightarrow$ ÖV als klarer, rationaler Vorteil anerkannt, wenn das Auto zum Problem wird.};
+    {Kein Parkplatzstress in der Stadt $\rightarrow$ ÖV als klarer, rationaler Vorteil anerkannt, wenn das Auto zum Problem wird. {\quote(Christian, Christof, Margrit)}};
   \node[pgcard] (g2) at (10.4,-2.55)
-    {Erlebnisfahrten (GoldenPass, Nostalgiezug, Dampfbahn) $\rightarrow$ Fahrt selbst als Highlight; bereit, dafür zu zahlen und zu planen.};
+    {Erlebnisfahrten (GoldenPass, Nostalgiezug, Dampfbahn) $\rightarrow$ Fahrt selbst als Highlight; bereit, dafür zu zahlen und zu planen. {\quote(Margrit, Hans Jörg)}};
   \node[pgcard] (g3) at (10.4,-4.40)
-    {Gemeinsam mit Freunden unterwegs $\rightarrow$ soziale Dimension macht ÖV attraktiv; ``die Leute kennt man mit der Zeit schon''.};
+    {Gemeinsam mit Freunden unterwegs $\rightarrow$ soziale Dimension macht ÖV attraktiv; ``die Leute kennt man mit der Zeit schon''. {\quote(Margrit, Peter)}};
   \node[pgcard] (g4) at (10.4,-6.25)
-    {Zeit im Zug produktiv und angenehm: lesen, Landschaft geniessen, entspannen $\rightarrow$ nach Pensionierung kein Zeitdruck mehr.};
+    {Zeit im Zug produktiv und angenehm: lesen, Landschaft geniessen, entspannen $\rightarrow$ nach Pensionierung kein Zeitdruck mehr. {\quote(Margrit, Hans Jörg)}};
   \node[pgcard] (g5) at (10.4,-8.10)
-    {Natur, Wandern, Kultur als starke Motivatoren $\rightarrow$ ÖV als idealer Zubringer zu Erlebniszielen, wenn die Verbindung klar ist.};
+    {Natur, Wandern, Kultur als starke Motivatoren $\rightarrow$ ÖV als idealer Zubringer zu Erlebniszielen, wenn die Verbindung klar ist. {\quote(Hans Jörg)}};
   \node[pgcard] (g6) at (10.4,-9.95)
-    {Digitale Kompetenz vorhanden: ZVV-App als ``sensationell'' erlebt $\rightarrow$ echte Offenheit für digitale Begleitung bei gutem Erlebnis.};
+    {Digitale Kompetenz vorhanden: ZVV-App als ``sensationell'' erlebt $\rightarrow$ echte Offenheit für digitale Begleitung bei gutem Erlebnis. {\quote(Hans Jörg, Peter)}};
   \node[pgcard] (g7) at (10.4,-11.80)
-    {Sammeln, Dokumentieren, Entdecken sind verankerte Verhaltensweisen $\rightarrow$ latente Bereitschaft für spielerische Erlebnisformate.};
+    {Sammeln, Dokumentieren, Entdecken sind verankerte Verhaltensweisen $\rightarrow$ latente Bereitschaft für spielerische Erlebnisformate. {\quote(Hans Jörg)}};
+  \end{scope}
 
   % ================= Hintergrund-Container =================
   \begin{pgfonlayer}{background}

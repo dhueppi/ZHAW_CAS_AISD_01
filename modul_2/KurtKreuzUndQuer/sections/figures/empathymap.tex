@@ -4,17 +4,17 @@
 \begin{tikzpicture}[
     x=1cm, y=1cm,
     lcard/.style={
-      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=definePastel,
       text=mmInk, font=\scriptsize\itshape, align=left,
       text width=56mm, inner sep=1.6mm, anchor=north west
     },
     mcard/.style={
-      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=developPastel,
       text=mmInk, font=\scriptsize\itshape, align=left,
       text width=88mm, inner sep=1.6mm, anchor=north west
     },
     rcard/.style={
-      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+      rounded corners=2pt, draw=mmInk, line width=0.55pt, fill=defaultPastel,
       text=mmInk, font=\scriptsize\itshape, align=left,
       text width=54mm, inner sep=1.6mm, anchor=north west
     },
@@ -23,11 +23,11 @@
   ]
 
   % ================= Kopfzeile =================
-  \node[anchor=north west, draw=mmInk, line width=0.55pt, fill=discoverPastel,
+  \node[anchor=north west, draw=mmInk, line width=0.55pt, fill=white,
         text=mmInk, font=\normalsize\bfseries\itshape,
         align=center, text width=224mm, inner sep=2mm, rounded corners=2pt]
         (hdr) at (0,0)
-    {Empathy Map \quad|\quad Frisch Pensionierte (65--70 J.) \quad|\quad Zielgruppe: ZVV-Fallstudie ``Mobilität für vitale Senior:innen''};
+    {Empathy Map \quad|\quad Pensionierte (über 65 Jahre ) \quad|\quad Zielgruppe: ZVV-Fallstudie ``Mobilität für vitale Senior:innen''};
 
   % ================= HEAR (linke Spalte) =================
   \node[emsub] (lh) at (0,-1.4) {HEAR?};
@@ -54,6 +54,7 @@
     {Freude am Gemeinsam-Erleben: Ausflüge mit Freundin, Gruppe oder Familie -- soziales Miteinander als Wert. {\quote(Margrit, Peter)}};
 
   % ================= SAY \& DO (Mitte unten) =================
+  \begin{scope}[mcard/.append style={fill=identifyPastel}]
   \node[emsub] (mh2) at (6.9,-9.65) {SAY \& DO?};
   \node[mcard] (s1) at (6.9,-10.20)
     {``Ich nehme das Auto für Transporte und schwere Sachen -- sonst eigentlich immer den ÖV.'' {\quote(Peter)}};
@@ -63,6 +64,7 @@
     {Fährt bewusst Erlebnisrouten: GoldenPass, Nostalgiezug, Dampfbahn Furka. ``Die Fahrt ist das Ziel.'' {\quote(Margrit, Hans Jörg)}};
   \node[mcard] (s4) at (6.9,-13.80)
     {``Wenn ich nach Zürich gehe, nehme ich die S-Bahn'' -- ÖV bei konkretem Nachteil des Autos (Parkplatz). {\quote(Christian, Christof)}};
+  \end{scope}
 
   % ================= SEE (rechte Spalte) =================
   \node[emsub] (rh) at (17.3,-1.4) {SEE?};
