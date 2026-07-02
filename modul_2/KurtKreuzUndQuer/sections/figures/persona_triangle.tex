@@ -1,0 +1,44 @@
+% Wirkungsdreieck ZVV -- Kurt -- Vreni (Define-Phase).
+% Stil analog der uebrigen TikZ-Figures: schwarze Konturen (mmInk), Pastell-
+% fuellungen, die sich vom gruenen Seitenhintergrund abheben. Schrift wird NICHT
+% skaliert; Groesse wird ueber die Geometrie (Koordinaten/Abstaende) gesteuert.
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    corner/.style={
+      draw=mmInk, line width=0.8pt, rounded corners=3pt,
+      minimum width=24mm, minimum height=12mm, align=center,
+      font=\normalsize\bfseries, text=mmInk
+    },
+    rel/.style={-{Latex[length=2.6mm]}, draw=mmInk, line width=0.9pt},
+    relbad/.style={-{Latex[length=2.6mm]}, draw=mmInk, line width=0.9pt, dashed},
+    elabel/.style={
+      fill=white, inner sep=1.2mm, align=center,
+      font=\normalsize\itshape, text=mmInk
+    }
+  ]
+
+  % ---- Ecken ----
+  \node[corner, fill=discoverPastel] (zvv)   at (0, 3.7)   {\gls{zvv}};
+  \node[corner, fill=developPastel]  (kurt)  at (-3.9, 0)  {Kurt};
+  \node[corner, fill=defaultPastel]  (vreni) at (3.9, 0)   {Vreni};
+
+  % ---- Verbindungen ----
+  % ZVV --> Kurt: gewinnt Botschafter
+  \draw[rel] (zvv) -- (kurt);
+  \node[elabel] at ($(zvv)!0.5!(kurt)$) {gewinnt\\Botschafter};
+
+  % Kurt --> Vreni: motiviert und unterstuetzt
+  \draw[rel] (kurt) -- (vreni);
+  \node[elabel] at ($(kurt)!0.5!(vreni)+(0,0.25)$) {motiviert \&\\unterstützt};
+
+  % ZVV -/- Vreni: erreicht die Zielgruppe kaum direkt (gestoerte Verbindung)
+  \draw[relbad] (zvv) -- (vreni);
+  \node[elabel, text=mmInk] at ($(zvv)!0.70!(vreni)+(0.45,0.10)$)
+    {erreicht Zielgruppe\\kaum direkt};
+  % rotes Kreuz auf der gestoerten Verbindung
+  \coordinate (mzv) at ($(zvv)!0.40!(vreni)$);
+  \node[fill=white, inner sep=0.6mm] at (mzv) {};
+  \draw[red, line width=1.1pt] ($(mzv)+(-2.2mm,-2.2mm)$) -- ($(mzv)+(2.2mm,2.2mm)$);
+  \draw[red, line width=1.1pt] ($(mzv)+(-2.2mm,2.2mm)$) -- ($(mzv)+(2.2mm,-2.2mm)$);
+
+\end{tikzpicture}

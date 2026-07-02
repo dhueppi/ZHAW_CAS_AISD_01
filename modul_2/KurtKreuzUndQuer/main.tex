@@ -37,6 +37,7 @@
 \definecolor{deliverPastel}{HTML}{EAF0F7}
 \definecolor{defaultPastel}{HTML}{F1E7FF}
 \definecolor{anhangPastel}{HTML}{E9E9EC}
+\definecolor{defineHead}{HTML}{9FCBA0}
 
 % Quadranten-Farben fuer das Feedback Capture Grid
 \definecolor{fbPositiv}{HTML}{D6EAD4}
@@ -106,15 +107,16 @@
 % Usage: \ColumnFigure[<width>]{<path>}{<caption>}   (default width = column width)
 \newcommand{\ColumnFigure}[3][\linewidth]{%
   \par\medskip
-  \begin{center}
+  \noindent\begin{minipage}{\linewidth}%
+    \centering
     \IfFileExists{#2.tex}{%
-      \adjustbox{max width=#1,max totalheight=0.85\textheight}{\input{#2}}%
+      \adjustbox{max width=#1,max totalheight=0.83\textheight}{\input{#2}}%
     }{%
-      \adjustbox{max width=#1,max totalheight=0.85\textheight}{\includegraphics{#2}}%
+      \adjustbox{max width=#1,max totalheight=0.83\textheight}{\includegraphics{#2}}%
     }
-    \captionsetup{type=figure,justification=centering}
-    \captionof{figure}{#3}
-  \end{center}
+    \captionsetup{type=figure,justification=centering}%
+    \captionof{figure}{#3}%
+  \end{minipage}%
   \par\medskip
 }
 
